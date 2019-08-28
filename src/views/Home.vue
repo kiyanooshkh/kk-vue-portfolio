@@ -1,6 +1,8 @@
 <template>
   <div class="home">
     <h1 class="headline grey--text">Home</h1>
+    <a href="#div-id" v-smooth-scroll="{ duration: 1000, offset: -500 }">Anchor</a>
+
     <v-container id="" class="my-5">
       <v-row class="mb-3 ml-1">
         <v-col>
@@ -48,6 +50,7 @@
     <v-container id="about" class="my-5">
       <v-row class="mb-3 ml-1">
         <v-col>
+          <div id="div-id"></div>
    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae praesentium nemo, dolore sapiente vero quisquam officiis laboriosam sunt possimus numquam consectetur nam obcaecati rem! Repellat, delectus! Nesciunt architecto reiciendis soluta!
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod ut quisquam laudantium incidunt aperiam impedit, vel eaque saepe veniam molestias, deleniti ad repellendus provident error. Aut provident distinctio debitis aliquid?
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, asperiores est quaerat animi similique excepturi odio voluptates iste vitae dignissimos obcaecati sit iure maiores, minima ut distinctio, inventore praesentium. Voluptate!
