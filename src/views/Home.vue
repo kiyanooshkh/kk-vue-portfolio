@@ -3,15 +3,32 @@
     <v-container class="pt-0 pb-0">
       <v-row>
         <v-col cols="12" sm="6" md="6" class="secondary full-height textwhite">
-          
-          <v-btn color="secondary" depressed large @click.stop="drawer = !drawer">
-            <v-icon left color="white">mdi-menu</v-icon>
-            <span>
-            MENU
-            </span>
-            </v-btn>
+          <v-row>
+            <v-col cols="12">
+              <v-btn color="secondary" depressed large @click.stop="drawer = !drawer">
+                <v-icon left color="white">mdi-menu</v-icon>
+                <span>MENU</span>
+              </v-btn>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col class="text-center" cols="6" offset="3">
+              <Profile/>
+              <br><br>
+              <p class="display-1 font-weight-black white--text">KIYANOOSH KHOSRAVI</p>
+            </v-col>
+          </v-row>
         </v-col>
-        <v-col cols="12" sm="6" md="6"></v-col>
+        <v-col cols="12" sm="6" md="6">
+          <v-row>
+            <v-col class="text-center" cols="6" offset="3">
+              <br><br>
+              <p class="display-1 font-weight-black grey--text">WEB DEVELOPER</p>
+              <p class="display-1 font-weight-black grey--text">AND</p>
+              <p class="display-1 font-weight-black grey--text">UX DESIGNER</p>
+            </v-col>
+          </v-row>
+        </v-col>
       </v-row>
     </v-container>
 
@@ -40,7 +57,10 @@
 </template>
 
 <script>
+import Profile from "@/components/Profile";
+
 export default {
+  components: { Profile },
   data() {
     return {
       noRadius: true,
@@ -54,5 +74,4 @@ export default {
 };
 </script>
 <style scoped>
-
 </style>
