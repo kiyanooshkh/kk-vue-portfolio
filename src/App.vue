@@ -18,3 +18,8 @@ export default {
   }),
 };
 </script>
+<style>
+.full-height {
+  height: 100vh;
+}
+</style>
