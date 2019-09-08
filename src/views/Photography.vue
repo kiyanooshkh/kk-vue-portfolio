@@ -11,6 +11,10 @@
           <v-row class="slide-left">
             <v-col class="text-center">
               <p class="display-2 font-weight-black white--text">PHOTOGRAPHY</p>
+                  <v-btn color="secondary" depressed large href="https://www.instagram.com/kiyanoosh.photography/" target="_blank">
+                    <v-icon left color="white">mdi-instagram</v-icon>
+                    <span>See more</span>
+                  </v-btn>
             </v-col>
           </v-row>
         </v-col>
