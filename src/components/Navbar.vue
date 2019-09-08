@@ -18,7 +18,7 @@
       <v-divider></v-divider>
 
       <v-list dense>
-        <v-list-item v-for="item in items" :key="item.title" link>
+        <v-list-item v-for="item in items" :key="item.title" link :to="item.route">
           <v-list-item-icon>
             <v-icon class="white--text">{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -39,10 +39,10 @@ export default {
       drawer: null,
       items: [
         { title: "Home", icon: "home", route: "/" },
-        { title: "Portfolio", icon: "", route: "/portfolio" },
-        { title: "About", icon: "", route: "/about" },
-        { title: "Photography", icon: "", route: "/photography" },
-        { title: "Contact", icon: "", route: "/contact" }
+        { title: "Portfolio", icon: "mdi-chevron-right", route: "/portfolio" },
+        { title: "About", icon: "mdi-chevron-right", route: "/about" },
+        { title: "Photography", icon: "mdi-chevron-right", route: "/photography" },
+        { title: "Contact", icon: "mdi-chevron-right", route: "/contact" }
       ]
     };
   }

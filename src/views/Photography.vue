@@ -10,16 +10,14 @@
           </v-row>
           <v-row class="slide-left">
             <v-col class="text-center">
-              <Profile />
+               <p class="display-3 font-weight-black white--text">PHOTOGRAPHY</p>
             </v-col>
           </v-row>
         </v-col>
         <v-col cols="12" sm="6" md="6">
           <v-row class="slide-right">
             <v-col class="text-center">
-              <p class="display-3 font-weight-black grey--text">WEB DEVELOPER</p>
-              <p class="display-3 font-weight-black grey--text">AND</p>
-              <p class="display-3 font-weight-black grey--text">UX DESIGNER</p>
+
             </v-col>
           </v-row>
         </v-col>
@@ -30,9 +28,9 @@
 
 <script>
 import Navbar from "../components/Navbar";
-import Profile from "../components/Profile";
+
 export default {
-  components: { Navbar, Profile },
+  components: { Navbar },
   data() {
     return {
       noRadius: true
