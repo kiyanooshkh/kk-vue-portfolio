@@ -5,10 +5,7 @@
         <v-col cols="12" sm="6" md="6" class="secondary full-height textwhite">
           <v-row>
             <v-col class="pt-0" cols="12">
-              <v-btn color="secondary" depressed large @click.stop="drawer = !drawer">
-                <v-icon left color="white">mdi-menu</v-icon>
-                <span>MENU</span>
-              </v-btn>
+              <Navbar />
             </v-col>
           </v-row>
           <v-row class="slide-left">
@@ -33,46 +30,16 @@
         </v-col>
       </v-row>
     </div>
-
-    <v-navigation-drawer v-model="drawer" color="secondary" absolute temporary>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title>
-            <v-row align="center" justify="center">
-              <v-img src="../assets/kiyanoosh-logo.svg" max-width="250" max-height="50"></v-img>
-            </v-row>
-          </v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider></v-divider>
-
-      <v-list dense>
-        <v-list-item v-for="item in items" :key="item.title" link>
-          <v-list-item-icon>
-            <v-icon class="white--text">{{ item.icon }}</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content class="white--text">
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
   </v-sheet>
 </template>
 
 <script>
+import Navbar from "../components/Navbar";
 export default {
-  components: {},
+  components: { Navbar },
   data() {
     return {
-      noRadius: true,
-      drawer: null,
-      items: [
-        { title: "Home", icon: "dashboard" },
-        { title: "About", icon: "question_answer" }
-      ]
+      noRadius: true
     };
   }
 };
