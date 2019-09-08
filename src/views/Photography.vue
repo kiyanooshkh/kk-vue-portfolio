@@ -2,7 +2,7 @@
   <v-sheet :tile="noRadius" class="overflow-hidden">
     <div class="pt-0 pb-0 pl-2">
       <v-row>
-        <v-col cols="12" sm="6" md="6" class="secondary full-height textwhite">
+        <v-col cols="12" md="12" lg="3" class="secondary full-height textwhite">
           <v-row>
             <v-col class="pt-0" cols="12">
               <Navbar />
@@ -10,30 +10,34 @@
           </v-row>
           <v-row class="slide-left">
             <v-col class="text-center">
-              <p class="display-3 font-weight-black white--text">PHOTOGRAPHY</p>
+              <p class="display-2 font-weight-black white--text">PHOTOGRAPHY</p>
             </v-col>
           </v-row>
         </v-col>
-        <v-col cols="12" sm="6" md="6" class="pt-0 pb-0">
+        <v-col cols="12" md="12" lg="9" class="pt-0 pb-0">
           <v-row>
             <v-col class="pt-0 pb-0">
-              <v-row>
+              <div class="row">
                 <vue-instagram
                   :token="accessToken"
-                  :count="9"
+                  :count="13"
                   :tags="['kiyanoosh']"
-                  mediaType="image">
+                  mediaType="image"
+                >
                   <template slot="feeds" slot-scope="props">
-                    <v-img
-                      :src="props.feed.images.standard_resolution.url"
-                      aspect-ratio="1"
-                      class="grey lighten-2 float-left"
-                      min-width="240"
-                      max-width="240"
-                    />
+                    <div class="column">
+                      <v-img
+                        :src="props.feed.images.standard_resolution.url"
+                        :lazy-src="props.feed.images.low_resolution.url"
+                        aspect-ratio="1"
+                        class="grey lighten-2"
+                        min-width="240"
+                        max-width="340"
+                      />
+                    </div>
                   </template>
                 </vue-instagram>
-              </v-row>
+              </div>
             </v-col>
           </v-row>
         </v-col>
@@ -60,7 +64,40 @@ export default {
 .slide-left {
   margin-top: 5%;
 }
-.float-left {
+.column {
   float: left;
+  width: 20%;
+  margin: 25px;
+  height: 250px; /* Should be removed. Only for demonstration */
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media only screen and (max-width: 1024px) {
+  .column {
+    width: 20%;
+    margin: 20px;
+  }
+  .full-height {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .column {
+    width: 25%;
+    margin: 25px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .column {
+    width: 75%;
+    margin: 50px;
+  }
 }
 </style>
