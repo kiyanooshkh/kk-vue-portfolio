@@ -16,7 +16,7 @@
         </v-col>
         <v-col cols="12" sm="6" md="6">
           <v-row class="slide-right">
-            <v-col class="text-center">
+            <v-col>
 
             </v-col>
           </v-row>
@@ -28,6 +28,7 @@
 
 <script>
 import Navbar from "../components/Navbar";
+
 
 export default {
   components: { Navbar },
