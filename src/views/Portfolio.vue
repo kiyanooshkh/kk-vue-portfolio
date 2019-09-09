@@ -10,7 +10,7 @@
           </v-row>
           <v-row class="slide-left">
             <v-col class="text-center">
-              <p class="display-2 font-weight-black white--text">PORTFOLIO</p>
+              <p class="display-1 font-weight-black white--text">PORTFOLIO</p>
             </v-col>
           </v-row>
         </v-col>

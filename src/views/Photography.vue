@@ -10,11 +10,17 @@
           </v-row>
           <v-row class="slide-left">
             <v-col class="text-center">
-              <p class="display-2 font-weight-black white--text">PHOTOGRAPHY</p>
-                  <v-btn color="primary" depressed large href="https://www.instagram.com/kiyanoosh.photography/" target="_blank">
-                    <v-icon left color="white">mdi-instagram</v-icon>
-                    <span>See more</span>
-                  </v-btn>
+              <p class="display-1 font-weight-black white--text">PHOTOGRAPHY</p>
+              <v-btn
+                color="primary"
+                depressed
+                large
+                href="https://www.instagram.com/kiyanoosh.photography/"
+                target="_blank"
+              >
+                <v-icon left color="white">mdi-instagram</v-icon>
+                <span>See more</span>
+              </v-btn>
             </v-col>
           </v-row>
         </v-col>
@@ -65,6 +71,10 @@ export default {
 };
 </script>
 <style scoped>
+.full-height {
+  height: 125vh;
+}
+
 .slide-left {
   margin-top: 5%;
 }
@@ -83,8 +93,8 @@ export default {
 
 @media only screen and (max-width: 1024px) {
   .slide-left {
-  margin-top: 1%;
-}
+    margin-top: 1%;
+  }
   .column {
     width: 20%;
     margin: 20px;
