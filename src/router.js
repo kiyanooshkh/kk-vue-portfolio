@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Contact from './views/Contact.vue'
-import Photography from './views/Photography.vue'
 import Portfolio from './views/Portfolio.vue'
 
 Vue.use(Router)
@@ -30,7 +29,7 @@ export default new Router({
     {
       path: '/photography',
       name: 'photography',
-      component: Photography
+      component: () => import('./views/Photography.vue')
     },
     {
       path: '/portfolio',

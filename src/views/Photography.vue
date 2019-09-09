@@ -82,6 +82,9 @@ export default {
 }
 
 @media only screen and (max-width: 1024px) {
+  .slide-left {
+  margin-top: 1%;
+}
   .column {
     width: 20%;
     margin: 20px;
