@@ -1,9 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import About from './views/About.vue'
-import Contact from './views/Contact.vue'
-import Portfolio from './views/Portfolio.vue'
 
 Vue.use(Router)
 
@@ -19,12 +16,12 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      component: About
+      component: () => import('./views/About.vue')
     },
     {
       path: '/contact',
       name: 'contact',
-      component: Contact
+      component: () => import('./views/Contact.vue')
     },
     {
       path: '/photography',
@@ -34,7 +31,7 @@ export default new Router({
     {
       path: '/portfolio',
       name: 'portfolio',
-      component: Portfolio
+      component: () => import('./views/Portfolio.vue')
     }
   ]
 })

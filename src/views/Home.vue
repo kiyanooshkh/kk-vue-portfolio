@@ -42,7 +42,7 @@ export default {
 </script>
 <style scoped>
 .slide-left {
-  margin-top: 5%;
+  margin-top: 10%;
 }
 .slide-right {
   margin-top: 25%;
