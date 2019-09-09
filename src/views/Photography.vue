@@ -72,7 +72,7 @@ export default {
 </script>
 <style scoped>
 .full-height {
-  height: 125vh;
+  height: 122vh;
 }
 
 .slide-left {
@@ -82,7 +82,7 @@ export default {
   float: left;
   width: 20%;
   margin: 25px;
-  height: 250px; /* Should be removed. Only for demonstration */
+  height: 240px; /* Should be removed. Only for demonstration */
 }
 
 .row:after {
