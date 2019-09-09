@@ -1,5 +1,7 @@
 # kk-vue-portfolio
 
+[![Build Status](https://travis-ci.org/kiyanooshkh/kk-vue-portfolio.svg?branch=master)](https://travis-ci.org/kiyanooshkh/kk-vue-portfolio)
+
 ## Project setup
 ```
 npm install
