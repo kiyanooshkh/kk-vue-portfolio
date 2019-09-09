@@ -2,7 +2,7 @@
   <v-sheet :tile="noRadius" class="overflow-hidden">
     <div class="pt-0 pb-0 pl-2">
       <v-row>
-        <v-col cols="12" md="12" lg="3" class="secondary full-height textwhite">
+        <v-col cols="12" md="12" lg="3" class="primary full-height textwhite">
           <v-row>
             <v-col class="pt-0" cols="12">
               <Navbar />
@@ -11,7 +11,7 @@
           <v-row class="slide-left">
             <v-col class="text-center">
               <p class="display-2 font-weight-black white--text">PHOTOGRAPHY</p>
-                  <v-btn color="secondary" depressed large href="https://www.instagram.com/kiyanoosh.photography/" target="_blank">
+                  <v-btn color="primary" depressed large href="https://www.instagram.com/kiyanoosh.photography/" target="_blank">
                     <v-icon left color="white">mdi-instagram</v-icon>
                     <span>See more</span>
                   </v-btn>

@@ -1,10 +1,10 @@
 <template>
   <div>
-    <v-btn color="secondary" depressed large @click.stop="drawer = !drawer">
+    <v-btn color="primary" depressed large @click.stop="drawer = !drawer">
       <v-icon left color="white">mdi-menu</v-icon>
       <span>MENU</span>
     </v-btn>
-    <v-navigation-drawer v-model="drawer" color="secondary" absolute temporary>
+    <v-navigation-drawer v-model="drawer" color="primary" absolute temporary>
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title>
