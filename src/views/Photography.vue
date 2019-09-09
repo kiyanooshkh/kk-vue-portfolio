@@ -42,7 +42,7 @@
                         aspect-ratio="1"
                         class="grey lighten-2"
                         min-width="240"
-                        max-width="340"
+                        max-width="280"
                       />
                     </div>
                   </template>
@@ -111,9 +111,9 @@ export default {
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 500px) {
   .column {
-    width: 75%;
+    width: 100%;
     margin: 50px;
   }
 }
