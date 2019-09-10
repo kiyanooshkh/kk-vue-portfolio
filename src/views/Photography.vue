@@ -17,9 +17,22 @@
         <v-col cols="12" md="12" lg="9" class="pt-0 pb-0">
           <v-row>
             <v-col class="pt-0 pb-0">
+              <v-row justify="center" v-if="grams.length == 0" class="text-center">
+                <v-col cols="6">
+                  <v-progress-linear color="primary accent-4" indeterminate rounded height="6"></v-progress-linear>
+                </v-col>
+              </v-row>
               <template v-if="grams.length > 0">
                 <v-row>
-                  <v-col no-gutters class="pa-0" cols="12" sm="6" md="3" v-for="gram in grams" :key="gram.title">
+                  <v-col
+                    no-gutters
+                    class="pa-0"
+                    cols="12"
+                    sm="6"
+                    md="3"
+                    v-for="gram in grams"
+                    :key="gram.title"
+                  >
                     <v-img
                       :src="gram.images.standard_resolution.url"
                       :lazy-src="gram.images.low_resolution.url"
@@ -31,7 +44,7 @@
               </template>
               <div v-else class="loading"></div>
               <div v-if="error" class="error">Sorry, the Instagrams couldn't be fetched.</div>
-              <div class="text-center mt-5 mb-5">
+              <div v-if="grams.length != 0" class="text-center mt-5 mb-5">
                 <v-btn color="primary" depressed large @click="getMoreGrams">
                   <v-icon left color="white">mdi-instagram</v-icon>
                   <span>See more</span>
@@ -53,8 +66,8 @@ export default {
   components: { Navbar },
   data() {
     return {
-      alignment: 'center',
-      justify: 'center',
+      alignment: "center",
+      justify: "center",
       noRadius: true,
       accessToken: "6172552658.1677ed0.28dcd06ca01844f1b7b485c6176e8280",
       url: "https://api.instagram.com/v1/users/self/media/recent/",
