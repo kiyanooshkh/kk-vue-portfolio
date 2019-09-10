@@ -105,43 +105,13 @@ export default {
 .slide-left {
   margin-top: 5%;
 }
-.column {
-  float: left;
-  width: 20%;
-  margin: 25px;
-  height: 240px; /* Should be removed. Only for demonstration */
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 @media only screen and (max-width: 1024px) {
   .slide-left {
     margin-top: 1%;
   }
-  .column {
-    width: 20%;
-    margin: 20px;
-  }
   .full-height {
     height: 200px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .column {
-    width: 25%;
-    margin: 25px;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .column {
-    width: 100%;
-    margin: 50px;
   }
 }
 </style>
