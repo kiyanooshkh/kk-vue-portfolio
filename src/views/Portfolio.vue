@@ -2,7 +2,7 @@
   <v-sheet :tile="noRadius" class="overflow-hidden">
     <div class="pt-0 pb-0 pl-2">
       <v-row>
-        <v-col cols="12" md="12" lg="3" class="primary full-height textwhite">
+        <v-col cols="12" md="12" lg="3" class="primary textwhite">
           <v-row>
             <v-col class="pt-0" cols="12">
               <Navbar />
@@ -16,24 +16,33 @@
         </v-col>
         <v-col cols="12" md="12" lg="9" class="pt-0 pb-0">
           <v-row>
-            <v-col cols="12" sm="4">
-              <v-card>
-                <v-img height="300px" src="../assets/phukettraining.png"></v-img>
-
-                <v-card-text>
-                  <div>
-                    <p class="headline mb-1">Phuket Training</p>
-                    <v-chip class="ma-2" color="primary" text-color="white">
-                      <v-avatar left>
-                        <v-icon>mdi-wordpress</v-icon>
-                      </v-avatar>WordPress
-                    </v-chip>
-                  </div>
-                  <div class="text-right">
-                    <v-btn text>Link</v-btn>
-                  </div>
-                </v-card-text>
-              </v-card>
+            <v-col no-gutters class="pa-0" cols="12" sm="6" md="6">
+              <v-img
+                src="../assets/diamondeventshire.jpg"
+                lazy-src="../assets/diamondeventshire.jpg"
+                aspect-ratio="1"
+                class="center grey lighten-2"
+              />
+            </v-col>
+            <v-col no-gutters class="pa-0" cols="12" sm="6" md="6"></v-col>
+            <v-col no-gutters class="pa-0" cols="12" sm="6" md="6"></v-col>
+            <v-col no-gutters class="pa-0" cols="12" sm="6" md="6">
+              <v-img
+                src="../assets/monaviphotography.jpg"
+                lazy-src="../assets/diamondeventshire.jpg"
+                aspect-ratio="1"
+                class="center grey lighten-2"
+              />
+            </v-col>
+            <v-col no-gutters class="pa-0" cols="12" sm="6" md="6"></v-col>
+            <v-col no-gutters class="pa-0" cols="12" sm="6" md="6"></v-col>
+            <v-col no-gutters class="pa-0" cols="12" sm="6" md="6">
+              <v-img
+                src="../assets/iisinsulation.jpg"
+                lazy-src="../assets/iisinsulation.jpg"
+                aspect-ratio="1"
+                class="center grey lighten-2"
+              />
             </v-col>
           </v-row>
         </v-col>
