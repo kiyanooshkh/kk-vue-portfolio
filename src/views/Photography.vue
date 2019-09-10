@@ -17,7 +17,8 @@
         <v-col cols="12" md="12" lg="9" class="pt-0 pb-0">
           <v-row>
             <v-col class="pt-0 pb-0">
-              <v-row justify="center" v-if="grams.length == 0" class="text-center">
+              <div class="loading">Loading&#8230;</div>
+              <v-row justify="center" v-if="grams.length == 0" class="text-center loader">
                 <v-col cols="6">
                   <v-progress-linear color="primary accent-4" indeterminate rounded height="6"></v-progress-linear>
                 </v-col>
@@ -115,6 +116,18 @@ export default {
 };
 </script>
 <style scoped>
+.loading{
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 .slide-left {
   margin-top: 5%;
 }
