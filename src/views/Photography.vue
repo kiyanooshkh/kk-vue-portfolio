@@ -19,14 +19,12 @@
             <v-col class="pt-0 pb-0">
               <template v-if="grams.length > 0">
                 <v-row>
-                  <v-col cols="12" md="3" v-for="gram in grams" :key="gram.title">
+                  <v-col no-gutters class="pa-0" cols="12" sm="6" md="3" v-for="gram in grams" :key="gram.title">
                     <v-img
                       :src="gram.images.standard_resolution.url"
                       :lazy-src="gram.images.low_resolution.url"
                       aspect-ratio="1"
-                      class="grey lighten-2"
-                      min-width="240"
-                      max-width="280"
+                      class="center grey lighten-2"
                     />
                   </v-col>
                 </v-row>
@@ -55,7 +53,8 @@ export default {
   components: { Navbar },
   data() {
     return {
-      feeds: [],
+      alignment: 'center',
+      justify: 'center',
       noRadius: true,
       accessToken: "6172552658.1677ed0.28dcd06ca01844f1b7b485c6176e8280",
       url: "https://api.instagram.com/v1/users/self/media/recent/",
