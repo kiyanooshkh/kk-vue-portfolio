@@ -1,5 +1,6 @@
 <template>
   <v-sheet :tile="noRadius" class="overflow-hidden">
+    <Spinner v-if="count <= 3" />
     <div class="pt-0 pb-0 pl-2">
       <v-row>
         <v-col cols="12" md="12" lg="3" class="primary textwhite">
@@ -26,7 +27,12 @@
               md="6"
             >
               <v-hover v-slot:default="{ hover }">
-                <v-img aspect-ratio="2" :src="item.img" :lazy-src="item.img" class="center grey lighten-2">
+                <v-img
+                  aspect-ratio="2"
+                  :src="item.img"
+                  :lazy-src="item.img"
+                  class="center grey lighten-2"
+                >
                   <v-expand-transition>
                     <div
                       v-if="hover"
@@ -38,7 +44,15 @@
                           <span class="title">{{item.name}}</span>
                         </v-col>
                         <v-col cols="12">
-                          <v-btn :href="item.url" target="_blank" class="mx-2" fab dark large color="secondary">
+                          <v-btn
+                            :href="item.url"
+                            target="_blank"
+                            class="mx-2"
+                            fab
+                            dark
+                            large
+                            color="secondary"
+                          >
                             <v-icon dark>mdi-open-in-new</v-icon>
                           </v-btn>
                         </v-col>
@@ -57,26 +71,56 @@
 
 <script>
 import Navbar from "../components/Navbar";
+import Spinner from "../components/Spinner";
 
 export default {
-  components: { Navbar },
+  components: { Navbar, Spinner },
   data() {
     return {
+      count: 0,
       noRadius: true,
       items: [
-        { img: require("@/assets/portfolio/monaviphotography.jpg"), url:"http://monaviphotography.com/", name:"Monavi Photography" },
-        { img: require("@/assets/portfolio/diamondeventshire.jpg"), url:"https://www.diamondeventshire.com.au", name:"Diamond Events Hire" },
-        { img: require("@/assets/portfolio/phukettraining.jpg"), url:"http://www.phukettraining.com.au/", name:"Phuket Training" },
-        { img: require("@/assets/portfolio/iisinsulation.jpg"), url:"http://www.iisinsulation.com.au/", name:"Iprimus Insulation Solution" },
-        { img: require("@/assets/portfolio/tamarahuntington.jpg"), url:"https://tamarahuntington.com.au/", name:"Tamara Huntington" },
-        { img: require("@/assets/portfolio/escrooms.jpg"), url:"http://escrooms.com.au", name:"ESC Rooms" },
+        {
+          img: require("@/assets/portfolio/monaviphotography.jpg"),
+          url: "http://monaviphotography.com/",
+          name: "Monavi Photography"
+        },
+        {
+          img: require("@/assets/portfolio/diamondeventshire.jpg"),
+          url: "https://www.diamondeventshire.com.au",
+          name: "Diamond Events Hire"
+        },
+        {
+          img: require("@/assets/portfolio/phukettraining.jpg"),
+          url: "http://www.phukettraining.com.au/",
+          name: "Phuket Training"
+        },
+        {
+          img: require("@/assets/portfolio/iisinsulation.jpg"),
+          url: "http://www.iisinsulation.com.au/",
+          name: "Iprimus Insulation Solution"
+        },
+        {
+          img: require("@/assets/portfolio/tamarahuntington.jpg"),
+          url: "https://tamarahuntington.com.au/",
+          name: "Tamara Huntington"
+        },
+        {
+          img: require("@/assets/portfolio/escrooms.jpg"),
+          url: "http://escrooms.com.au",
+          name: "ESC Rooms"
+        }
       ]
     };
+  },
+  created() {
+    setInterval(() => {
+      this.count++;
+    }, 1000);
   }
 };
 </script>
 <style scoped>
-
 .slide-left {
   margin-top: 5%;
 }
