@@ -20,7 +20,6 @@
               <v-img
                 src="../assets/diamondeventshire.jpg"
                 lazy-src="../assets/diamondeventshire.jpg"
-                aspect-ratio="1"
                 class="center grey lighten-2"
               />
             </v-col>
@@ -29,21 +28,11 @@
             <v-col no-gutters class="pa-0" cols="12" sm="6" md="6">
               <v-img
                 src="../assets/monaviphotography.jpg"
-                lazy-src="../assets/diamondeventshire.jpg"
-                aspect-ratio="1"
+                lazy-src="../assets/monaviphotography.jpg"
                 class="center grey lighten-2"
               />
             </v-col>
             <v-col no-gutters class="pa-0" cols="12" sm="6" md="6"></v-col>
-            <v-col no-gutters class="pa-0" cols="12" sm="6" md="6"></v-col>
-            <v-col no-gutters class="pa-0" cols="12" sm="6" md="6">
-              <v-img
-                src="../assets/iisinsulation.jpg"
-                lazy-src="../assets/iisinsulation.jpg"
-                aspect-ratio="1"
-                class="center grey lighten-2"
-              />
-            </v-col>
           </v-row>
         </v-col>
       </v-row>
