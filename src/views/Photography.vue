@@ -63,8 +63,6 @@ export default {
   components: { Navbar, Spinner },
   data() {
     return {
-      alignment: "center",
-      justify: "center",
       noRadius: true,
       accessToken: "6172552658.1677ed0.28dcd06ca01844f1b7b485c6176e8280",
       url: "https://api.instagram.com/v1/users/self/media/recent/",

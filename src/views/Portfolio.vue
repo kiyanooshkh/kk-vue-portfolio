@@ -16,23 +16,13 @@
         </v-col>
         <v-col cols="12" md="12" lg="9" class="pt-0 pb-0">
           <v-row>
-            <v-col no-gutters class="pa-0" cols="12" sm="6" md="6">
+            <v-col v-for="item in items" :key="item.img" no-gutters class="pa-0" cols="12" sm="6" md="6">
               <v-img
-                src="../assets/diamondeventshire.jpg"
-                lazy-src="../assets/diamondeventshire.jpg"
+                :src="item.img"
+                :lazy-src="item.img"
                 class="center grey lighten-2"
               />
             </v-col>
-            <v-col no-gutters class="pa-0" cols="12" sm="6" md="6"></v-col>
-            <v-col no-gutters class="pa-0" cols="12" sm="6" md="6"></v-col>
-            <v-col no-gutters class="pa-0" cols="12" sm="6" md="6">
-              <v-img
-                src="../assets/monaviphotography.jpg"
-                lazy-src="../assets/monaviphotography.jpg"
-                class="center grey lighten-2"
-              />
-            </v-col>
-            <v-col no-gutters class="pa-0" cols="12" sm="6" md="6"></v-col>
           </v-row>
         </v-col>
       </v-row>
@@ -47,7 +37,15 @@ export default {
   components: { Navbar },
   data() {
     return {
-      noRadius: true
+      noRadius: true,
+      items: [
+        { img: require('@/assets/portfolio/monaviphotography.jpg')},
+        { img: require('@/assets/portfolio/diamondeventshire.jpg')},
+        { img: require('@/assets/portfolio/phukettraining.jpg')},
+        { img: require('@/assets/portfolio/iisinsulation.jpg')},
+        { img: require('@/assets/portfolio/tamarahuntington.jpg')},
+        { img: require('@/assets/portfolio/escrooms.jpg')}
+      ]
     };
   }
 };
