@@ -89,6 +89,7 @@
 
 <script>
 import Navbar from "../components/Navbar";
+import sgMail from "@sendgrid/mail";
 
 export default {
   components: { Navbar },
@@ -125,6 +126,16 @@ export default {
     submit() {
       if (this.$refs.form.validate()) {
         this.loading = true;
+        sgMail.setApiKey(
+          "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"
+        );
+        const msg = {
+          to: "contact@kiyanoosh.com",
+          from: this.email,
+          subject: "From Kiyanoosh Website",
+          html: this.name + this.mobile + this.message
+        };
+        sgMail.send(msg);
       }
     }
   }
