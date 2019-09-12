@@ -22,9 +22,9 @@
                   <v-row>
                     <v-col cols="12">
                       <v-text-field
-                        v-model="title"
-                        :rules="titleRules"
-                        :counter="20"
+                        v-model="name"
+                        :rules="nameRules"
+                        :counter="50"
                         label="Name"
                         prepend-icon="mdi-account"
                         required
@@ -32,9 +32,9 @@
                     </v-col>
                     <v-col cols="12">
                       <v-text-field
-                        v-model="title"
-                        :rules="titleRules"
-                        :counter="20"
+                        v-model="email"
+                        :rules="emailRules"
+                        :counter="100"
                         label="Emails"
                         prepend-icon="email"
                         required
@@ -43,10 +43,10 @@
 
                     <v-col cols="12">
                       <v-text-field
-                        v-model="title"
-                        :rules="titleRules"
+                        v-model="mobile"
+                        :rules="mobileRules"
                         :counter="10"
-                        label="phone"
+                        label="Mobile"
                         prepend-icon="mdi-cellphone"
                         required
                       ></v-text-field>
@@ -54,8 +54,8 @@
 
                     <v-col cols="12">
                       <v-textarea
-                        v-model="content"
-                        :rules="contentRules"
+                        v-model="message"
+                        :rules="messageRules"
                         :counter="200"
                         label="Message"
                         prepend-icon="edit"
@@ -74,11 +74,11 @@
               </v-form>
             </v-col>
             <v-col cols="6">
-                              <v-img
-                  src="@/assets/contact-image.jpg"
-                  lazy-src="item.img"
-                  class="center grey lighten-2"
-                />
+              <v-img
+                src="@/assets/contact-image.jpg"
+                lazy-src="item.img"
+                class="center grey lighten-2"
+              />
             </v-col>
           </v-row>
         </v-col>
@@ -96,16 +96,26 @@ export default {
     return {
       noRadius: true,
       valid: false,
-      title: "",
-      content: "",
+      name: "",
+      email: "",
+      message: "",
+      mobile: "",
       loading: false,
-      titleRules: [
-        v => !!v || "Title is required",
-        v => v.length <= 20 || "Title must be less than 20 characters"
+      nameRules: [
+        v => !!v || "Name is required",
+        v => v.length <= 50 || "Name must be less than 50 characters"
       ],
-      contentRules: [
-        v => !!v || "Information is required",
-        v => v.length <= 200 || "Information must be less than 200 characters"
+      emailRules: [
+        v => !!v || "Email is required",
+        v => v.length <= 100 || "Email must be less than 100 characters"
+      ],
+      mobileRules: [
+        v => !!v || "Mobile is required",
+        v => v.length <= 10 || "Mobile must be less than 10 characters"
+      ],
+      messageRules: [
+        v => !!v || "Message is required",
+        v => v.length <= 250 || "Message must be less than 200 characters"
       ],
       dueRules: [v => !!v || "Due Date is required"],
       dialog: false
