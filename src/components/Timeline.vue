@@ -1,12 +1,10 @@
 <template>
   <v-timeline>
     <v-timeline-item v-for="(job, i) in jobs" :key="i" small right="right">
-      <template v-slot:opposite>
-        <span :class="`font-weight-bold`" v-text="job.year"></span>
-      </template>
       <div class="py-4">
         <p :class="`title font-weight-light mb-1 text-left`">{{job.title}}</p>
         <p :class="`subtitle-1 font-weight-light mb-3 text-left`">{{job.company}}</p>
+        <p :class="`subtitle-2 font-weight-bold text-left`">{{job.year}}</p>
         <div class="text-left">
           <span v-html="job.description"></span>
         </div>
