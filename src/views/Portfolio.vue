@@ -1,6 +1,6 @@
 <template>
   <v-sheet :tile="noRadius" class="overflow-hidden">
-    <Spinner v-if="count <= 3" />
+    <Spinner v-if="!show" />
     <div class="pt-0 pb-0 pl-2">
       <v-row>
         <v-col cols="12" md="12" lg="3" class="primary textwhite">
@@ -77,7 +77,7 @@ export default {
   components: { Navbar, Spinner },
   data() {
     return {
-      count: 0,
+      show: false,
       noRadius: true,
       items: [
         {
@@ -115,8 +115,8 @@ export default {
   },
   created() {
     setInterval(() => {
-      this.count++;
-    }, 1000);
+      this.show = true;
+    }, 3000);
   }
 };
 </script>
