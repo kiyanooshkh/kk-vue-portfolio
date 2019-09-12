@@ -10,14 +10,17 @@
           </v-row>
           <v-row class="slide-left">
             <v-col class="text-center">
-               <p class="display-1 font-weight-black white--text">ABOUT</p>
+              <p class="display-1 font-weight-black white--text">ABOUT</p>
             </v-col>
           </v-row>
         </v-col>
         <v-col cols="12" md="12" lg="9" class="pt-0 pb-0">
           <v-row class="slide-right">
-            <v-col class="text-center">
-                <Timeline/>
+            <v-col no-gutters cols="12" md="4" class="text-center">
+              
+            </v-col>
+            <v-col no-gutters cols="12" md="8" class="text-center">
+              <Timeline />
             </v-col>
           </v-row>
         </v-col>

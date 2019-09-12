@@ -1,5 +1,5 @@
 <template>
-  <v-timeline>
+  <v-timeline dense="dense">
     <v-timeline-item v-for="(job, i) in jobs" :key="i" small right="right">
       <div class="py-4">
         <p :class="`title font-weight-light mb-1 text-left`">{{job.title}}</p>
