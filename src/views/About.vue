@@ -16,7 +16,7 @@
         </v-col>
         <v-col cols="12" md="12" lg="9" class="pt-0 pb-0 px-5">
           <v-row class="slide-right">
-            <v-col cols="12" md="4" class="text-center">
+            <v-col cols="12" md="5" class="text-center">
               <div class="mb-4 text-left">
                 <p class="title mb-1">About</p>
                 <p>My name is Kiyanoosh Khosravi and I live in Adelaide, Australia. I was always passionate about technology and computer science. I gained my dream by studying the computer science from private schools to university education. University helped me to develop my technical skills such as networking, programming and web development and improved my other skills such as communications, team management, support. I’m currently working as Full Stack Developer for Certegy Ezi-Pay</p>
@@ -27,9 +27,9 @@
                   <span>Linkedin Profile</span>
                 </v-btn>
               </div>
-              <Skills />
+              <WorkSkills />
             </v-col>
-            <v-col cols="12" md="8" class="text-center">
+            <v-col cols="12" md="7" class="text-center">
               <Timeline />
             </v-col>
           </v-row>
@@ -42,10 +42,10 @@
 <script>
 import Navbar from "../components/Navbar";
 import Timeline from "../components/Timeline";
-import Skills from "../components/Skills";
+import WorkSkills from "../components/WorkSkills";
 
 export default {
-  components: { Navbar, Timeline, Skills },
+  components: { Navbar, Timeline, WorkSkills },
   data() {
     return {
       noRadius: true
