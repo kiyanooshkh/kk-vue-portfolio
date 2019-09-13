@@ -117,7 +117,7 @@ export default {
       mobileRules: [
         v => !!v || "Mobile is required",
         v => v.length <= 10 || "Mobile must be less than 10 characters",
-        v => this.validMobile(v) || "Please enter a valid email address"
+        v => this.validMobile(v) || "Please enter a valid mobile number"
       ],
       messageRules: [
         v => !!v || "Message is required",
