@@ -84,6 +84,10 @@
         </v-col>
       </v-row>
     </div>
+    <v-snackbar v-model="snackbar">
+      Email has been sent successfully
+      <v-btn color="white" text @click="snackbar = false">Close</v-btn>
+    </v-snackbar>
   </v-sheet>
 </template>
 
@@ -104,6 +108,7 @@ export default {
       dest: "contact@kiyanoosh.com",
       loading: false,
       error: false,
+      snackbar: false,
       url: "https://us-central1-kk-portfolio.cloudfunctions.net/sendMail",
       nameRules: [
         v => !!v || "Name is required",
@@ -134,13 +139,9 @@ export default {
           .post(
             `${this.url}?email="${this.email}"&dest="${this.dest}"&name="${this.name}"&message="${this.message}"&mobile="${this.mobile}"`
           )
-          .then(({ data }) => {
+          .then(() => {
             this.loading = false;
-            console.log(data);
-          })
-          .catch(function(error) {
-            console.log(error);
-            this.error = true;
+            this.snackbar = true;
           });
       }
     },
@@ -149,7 +150,7 @@ export default {
       return re.test(email);
     },
     validMobile: function(mobile) {
-      var re = /^(?:\+?61|0)4 ?(?:(?:[01] ?[0-9]|2 ?[0-57-9]|3 ?[1-9]|4 ?[7-9]|5 ?[018]) ?[0-9]|3 ?0 ?[0-5])(?: ?[0-9]){5}$/;
+      var re = /^04(\s?[0-9]{2}\s?)([0-9]{3}\s?[0-9]{3}|[0-9]{2}\s?[0-9]{2}\s?[0-9]{2})$/;
       return re.test(mobile);
     }
   }
