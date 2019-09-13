@@ -16,7 +16,7 @@
         </v-col>
         <v-col cols="12" md="12" lg="9" class="pt-0 pb-0">
           <v-row class="slide-right">
-            <v-col cols="6" class="text-center">
+            <v-col cols="12" md="6" class="text-center">
               <v-form v-model="valid" ref="form">
                 <v-container>
                   <v-row>
@@ -73,7 +73,7 @@
                 </v-container>
               </v-form>
             </v-col>
-            <v-col cols="6">
+            <v-col cols="12" md="6">
               <v-img
                 src="@/assets/contact-image.jpg"
                 lazy-src="item.img"
@@ -111,18 +111,18 @@ export default {
       ],
       emailRules: [
         v => !!v || "Email is required",
-        v => v.length <= 100 || "Email must be less than 100 characters"
+        v => v.length <= 100 || "Email must be less than 100 characters",
+        v => this.validEmail(v) || "Please enter a valid email address"
       ],
       mobileRules: [
         v => !!v || "Mobile is required",
-        v => v.length <= 10 || "Mobile must be less than 10 characters"
+        v => v.length <= 10 || "Mobile must be less than 10 characters",
+        v => this.validMobile(v) || "Please enter a valid email address"
       ],
       messageRules: [
         v => !!v || "Message is required",
         v => v.length <= 250 || "Message must be less than 200 characters"
-      ],
-      dueRules: [v => !!v || "Due Date is required"],
-      dialog: false
+      ]
     };
   },
   methods: {
@@ -131,7 +131,9 @@ export default {
         this.loading = true;
 
         axios
-          .post(`${this.url}?email="${this.email}"&dest="${this.dest}"&name="${this.name}"&message="${this.message}"&mobile="${this.mobile}"`)
+          .post(
+            `${this.url}?email="${this.email}"&dest="${this.dest}"&name="${this.name}"&message="${this.message}"&mobile="${this.mobile}"`
+          )
           .then(({ data }) => {
             this.loading = false;
             console.log(data);
@@ -141,6 +143,14 @@ export default {
             this.error = true;
           });
       }
+    },
+    validEmail: function(email) {
+      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    },
+    validMobile: function(mobile) {
+      var re = /^(?:\+?61|0)4 ?(?:(?:[01] ?[0-9]|2 ?[0-57-9]|3 ?[1-9]|4 ?[7-9]|5 ?[018]) ?[0-9]|3 ?0 ?[0-5])(?: ?[0-9]){5}$/;
+      return re.test(mobile);
     }
   }
 };
@@ -148,5 +158,13 @@ export default {
 <style scoped>
 .slide-left {
   margin-top: 5%;
+}
+@media only screen and (max-width: 1024px) {
+  .slide-left {
+    margin-top: 1%;
+  }
+  .full-height {
+    height: 200px;
+  }
 }
 </style>
