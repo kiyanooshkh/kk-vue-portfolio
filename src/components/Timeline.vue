@@ -21,11 +21,13 @@ export default {
         title: "Full-Stack Developer",
         company: "Certegy Ezi-Pay",
         year: "Apr 2018 - Present",
-        description: `Application Development Object-Orientated C# .NET, MVC <br>
-                      Website Development with Aurelia, HTML, CSS, Materialize, Bootstrap, JavaScript <br>
+        description: `Designing, developing and unit testing web application, across the full application stack (C#.NET including, WebAPI, MVC, EF) <br>
+                      Keeping abreast of new technologies in the web and mobile space <br>
+                      Providing support for relevant areas of the system <br>
+                      Website Development HTML/CSS and JavaScript/Typescript - Aurelia JS <br>
+                      Automation GIT, Octopus Deploy <br>
                       Solution Design, Analysis & Documentation <br>
-                      Database Development with Entity Framework, LINQ <br>
-                      Redeveloping and supporting the legacy systems`
+                      Redeveloping and supporting the legacy systems <br>`
       },
       {
         title: "Frontend Developer",

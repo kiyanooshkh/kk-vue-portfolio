@@ -1,5 +1,6 @@
 <template>
   <v-sheet :tile="noRadius" class="overflow-hidden">
+        <Spinner v-if="!show" />
     <div class="pt-0 pb-0 pl-2">
       <v-row>
         <v-col cols="12" md="12" lg="3" class="primary textwhite">
@@ -43,13 +44,20 @@
 import Navbar from "../components/Navbar";
 import Timeline from "../components/Timeline";
 import WorkSkills from "../components/WorkSkills";
+import Spinner from "../components/Spinner";
 
 export default {
-  components: { Navbar, Timeline, WorkSkills },
+  components: { Navbar, Timeline, WorkSkills, Spinner },
   data() {
     return {
+      show: false,
       noRadius: true
     };
+  },
+  created() {
+    setInterval(() => {
+      this.show = true;
+    }, 2000);
   }
 };
 </script>
