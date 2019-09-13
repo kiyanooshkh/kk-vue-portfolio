@@ -101,6 +101,7 @@ export default {
       email: "",
       message: "",
       mobile: "",
+      dest:"contact@kiyanoosh.com",
       loading: false,
       error: false,
       url:"https://us-central1-kk-portfolio.cloudfunctions.net/sendMail",
@@ -129,7 +130,7 @@ export default {
       if (this.$refs.form.validate()) {
         this.loading = true;
       axios
-        .post(this.url + "?email=" + this.email + "?dest=contact@kiyanoosh.com"+ "?name=" + this.name +"?mobile=" + this.mobile + "?message=" + this.message)
+        .post(this.url +"?dest="+ this.dest + "?email=" + this.email + "?name=" + this.name +"?mobile=" + this.mobile + "?message=" + this.message)
         .then(() => this.loading = false)
         .catch(function(error) {
           console.log(error);
