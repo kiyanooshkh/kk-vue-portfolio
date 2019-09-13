@@ -89,7 +89,7 @@
 
 <script>
 import Navbar from "../components/Navbar";
-import sgMail from "@sendgrid/mail";
+import axios from "axios";
 
 export default {
   components: { Navbar },
@@ -102,6 +102,8 @@ export default {
       message: "",
       mobile: "",
       loading: false,
+      error: false,
+      url:"https://us-central1-kk-portfolio.cloudfunctions.net/sendMail",
       nameRules: [
         v => !!v || "Name is required",
         v => v.length <= 50 || "Name must be less than 50 characters"
@@ -126,16 +128,13 @@ export default {
     submit() {
       if (this.$refs.form.validate()) {
         this.loading = true;
-        sgMail.setApiKey(
-          "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"
-        );
-        const msg = {
-          to: "contact@kiyanoosh.com",
-          from: this.email,
-          subject: "From Kiyanoosh Website",
-          html: this.name + this.mobile + this.message
-        };
-        sgMail.send(msg);
+      axios
+        .post(this.url + "?email=" + this.email + "?dest=contact@kiyanoosh.com"+ "?name=" + this.name +"?mobile=" + this.mobile + "?message=" + this.message)
+        .then(() => this.loading = false)
+        .catch(function(error) {
+          console.log(error);
+          this.error = true;
+        });
       }
     }
   }
