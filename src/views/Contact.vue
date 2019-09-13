@@ -101,10 +101,10 @@ export default {
       email: "",
       message: "",
       mobile: "",
-      dest:"contact@kiyanoosh.com",
+      dest: "contact@kiyanoosh.com",
       loading: false,
       error: false,
-      url:"https://us-central1-kk-portfolio.cloudfunctions.net/sendMail",
+      url: "https://us-central1-kk-portfolio.cloudfunctions.net/sendMail",
       nameRules: [
         v => !!v || "Name is required",
         v => v.length <= 50 || "Name must be less than 50 characters"
@@ -129,13 +129,17 @@ export default {
     submit() {
       if (this.$refs.form.validate()) {
         this.loading = true;
-      axios
-        .post(this.url +"?dest="+ this.dest + "?email=" + this.email + "?name=" + this.name +"?mobile=" + this.mobile + "?message=" + this.message)
-        .then(() => this.loading = false)
-        .catch(function(error) {
-          console.log(error);
-          this.error = true;
-        });
+
+        axios
+          .post(`${this.url}?email="${this.email}"&dest="${this.dest}"&name="${this.name}"&message="${this.message}"&mobile="${this.mobile}"`)
+          .then(({ data }) => {
+            this.loading = false;
+            console.log(data);
+          })
+          .catch(function(error) {
+            console.log(error);
+            this.error = true;
+          });
       }
     }
   }
