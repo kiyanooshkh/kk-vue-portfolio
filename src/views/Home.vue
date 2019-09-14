@@ -12,15 +12,18 @@
           <v-row class="slide-left">
             <v-col class="text-center">
               <Profile />
+              <div class="d-block d-sm-none">
+                <p class="headline font-weight-black white--text">WEB DEVELOPER AND UI/UX DESIGNER</p>
+              </div>
             </v-col>
           </v-row>
         </v-col>
-        <v-col cols="12" sm="6" md="6">
+        <v-col cols="12" sm="6" md="6" class="d-none d-sm-block">
           <v-row class="slide-right">
             <v-col class="text-center">
               <p class="display-3 font-weight-black grey--text">WEB DEVELOPER</p>
               <p class="display-3 font-weight-black grey--text">AND</p>
-              <p class="display-3 font-weight-black grey--text">UX DESIGNER</p>
+              <p class="display-3 font-weight-black grey--text">UI/UX DESIGNER</p>
             </v-col>
           </v-row>
         </v-col>

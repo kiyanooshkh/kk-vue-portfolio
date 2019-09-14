@@ -24,11 +24,17 @@ export default {};
 
 .spinner {
   z-index: 999;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 48%;
+}
+
+@media only screen and (max-width: 500px) {
+  .spinner {
+    left: 46%;
+  }
 }
 
 .double-bounce1,
