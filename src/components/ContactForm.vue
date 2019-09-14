@@ -18,7 +18,7 @@
               v-model="email"
               :rules="emailRules"
               :counter="100"
-              label="Emails"
+              label="Email"
               prepend-icon="email"
               required
             ></v-text-field>
