@@ -12,8 +12,6 @@
           <v-row class="top text-center">
             <v-col cols="12">
               <Profile/>
-              <div class="display-2 font-weight-bold white--text mb-5">I am Kiyanoosh Khosravi</div>
-              <div class="display-2 font-weight-light white--text mb-2">WEB DEVELOPER,<br> UI AND UX DESIGNER</div>
             </v-col>
           </v-row>
         </v-col>
@@ -43,11 +41,6 @@ export default {
 };
 </script>
 <style scoped>
-.display-font-7{
-    font-size: 7rem !important;
-    font-weight: 300;
-    font-family: "Roboto", sans-serif !important;
-}
 .uppercase {
   text-transform: uppercase;
 }
