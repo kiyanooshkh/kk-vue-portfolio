@@ -3,7 +3,7 @@
     <Spinner v-if="grams.length == 0" />
     <div class="pt-0 pb-0 pl-2">
       <v-row>
-        <v-col cols="12" md="12" lg="3" class="primary textwhite">
+        <v-col cols="12" md="12" lg="3" class="primary white--text">
           <v-row>
             <v-col class="pt-0" cols="12">
               <Navbar />
@@ -39,7 +39,7 @@
                 </v-row>
               </template>
               <div v-else class="loading"></div>
-              <div v-if="error" class="error">Sorry, the Instagrams couldn't be fetched.</div>
+              <div v-if="error" class="error">Sorry, the Instagram couldn't be fetched.</div>
               <div v-if="grams.length != 0" class="text-center mt-5 mb-5">
                 <v-btn color="primary" depressed large @click="getMoreGrams">
                   <v-icon left color="white">mdi-instagram</v-icon>

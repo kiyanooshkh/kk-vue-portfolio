@@ -4,7 +4,7 @@
 
     <div class="pt-0 pb-0 pl-2">
       <v-row>
-        <v-col cols="12" md="12" lg="3" class="primary full-height textwhite">
+        <v-col cols="12" md="12" lg="3" class="primary full-height white--text">
           <v-row>
             <v-col class="pt-0" cols="12">
               <Navbar />
