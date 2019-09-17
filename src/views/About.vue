@@ -1,9 +1,9 @@
 <template>
   <v-sheet :tile="noRadius" class="overflow-hidden">
-        <Spinner v-if="!show" />
+    <Spinner v-if="!show" />
     <div class="pt-0 pb-0 pl-2">
       <v-row>
-        <v-col cols="12" md="12" lg="3" class="primary white--text">
+        <v-col cols="12" md="12" lg="3" class="primary mobile-banner white--text">
           <v-row>
             <v-col class="pt-0" cols="12">
               <Navbar />
@@ -23,7 +23,13 @@
                 <p>My name is Kiyanoosh Khosravi and I live in Adelaide, Australia. I was always passionate about technology and computer science. I gained my dream by studying the computer science from private schools to university education. University helped me to develop my technical skills such as networking, programming and web development and improved my other skills such as communications, team management, support. I’m currently working as Full Stack Developer for Certegy Ezi-Pay</p>
                 <p class="title mb-1">Linkedin Profile</p>
                 <p>You can view my LinkedIn profile</p>
-                <v-btn color="primary" depressed large href="https://www.linkedin.com/in/kiyanoosh/" target="_blank">
+                <v-btn
+                  color="primary"
+                  depressed
+                  large
+                  href="https://www.linkedin.com/in/kiyanoosh/"
+                  target="_blank"
+                >
                   <v-icon left color="white" small>mdi-linkedin</v-icon>
                   <span>Linkedin Profile</span>
                 </v-btn>

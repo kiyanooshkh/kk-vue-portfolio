@@ -1,28 +1,7 @@
 <template>
   <v-row>
     <v-col no-gutters class="pt-0 pb-0" cols="12">
-      <v-row v-if="desktopMenu && resizeWindowSize.x > 1024" class="text-right">
-        <v-col cols="6">
-          <v-img src="../assets/kiyanoosh-logo.svg" max-width="250" max-height="50"></v-img>
-        </v-col>
-        <v-col cols="6">
-          <v-btn
-            class="mr-3"
-            color="primary"
-            depressed
-            large
-            v-for="item in items"
-            :key="item.title"
-            link
-            :to="item.route"
-          >
-            <span>{{ item.title }}</span>
-          </v-btn>
-        </v-col>
-      </v-row>
-
       <v-btn
-        v-if="!desktopMenu || resizeWindowSize.x <= 1024"
         color="primary"
         depressed
         large
@@ -62,9 +41,6 @@
 
 <script>
 export default {
-  props: {
-    desktopMenu: Boolean
-  },
   data() {
     return {
       drawer: null,
@@ -76,11 +52,6 @@ export default {
         { title: "Contact", icon: "mdi-chevron-right", route: "/contact" }
       ]
     };
-  },
-  computed: {
-    resizeWindowSize: function() {
-      return { x: window.innerWidth, y: window.innerHeight };
-    }
   }
 };
 </script>

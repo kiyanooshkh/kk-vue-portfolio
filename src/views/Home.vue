@@ -6,7 +6,7 @@
         <v-col cols="12" class="primary full-height white--text">
           <v-row>
             <v-col class="pt-0" cols="12">
-              <Navbar :desktopMenu="true" />
+              <Navbar/>
             </v-col>
           </v-row>
           <v-row class="top text-center">
@@ -45,6 +45,6 @@ export default {
   text-transform: uppercase;
 }
 .top {
-  margin-top: 8%;
+  margin-top: 5%;
 }
 </style>

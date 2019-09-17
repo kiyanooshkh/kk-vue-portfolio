@@ -16,4 +16,9 @@ export default {
 .full-height {
   height: 100vh;
 }
+@media only screen and (max-width: 500px) {
+  .mobile-banner {
+    height: 185px;
+  }
+}
 </style>

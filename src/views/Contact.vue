@@ -1,10 +1,9 @@
 <template>
   <v-sheet :tile="noRadius" class="overflow-hidden">
     <Spinner v-if="!show" />
-
     <div class="pt-0 pb-0 pl-2">
       <v-row>
-        <v-col cols="12" md="12" lg="3" class="primary full-height white--text">
+        <v-col cols="12" md="12" lg="3" class="primary full-height mobile-banner white--text">
           <v-row>
             <v-col class="pt-0" cols="12">
               <Navbar />
@@ -62,9 +61,6 @@ export default {
 @media only screen and (max-width: 1024px) {
   .slide-left {
     margin-top: 1%;
-  }
-  .full-height {
-    height: 200px;
   }
 }
 </style>
