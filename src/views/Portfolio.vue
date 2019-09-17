@@ -81,9 +81,19 @@ export default {
       noRadius: true,
       items: [
         {
+          img: require("@/assets/portfolio/bahaimedia.jpg"),
+          url: "https://bahaimedia.net/",
+          name: "Baha'i Media"
+        },
+        {
           img: require("@/assets/portfolio/monaviphotography.jpg"),
           url: "http://monaviphotography.com/",
           name: "Monavi Photography"
+        },
+                {
+          img: require("@/assets/portfolio/pinkdiamondphotography.jpg"),
+          url: "http://www.pinkdiamondphotography.com.au",
+          name: "Pink Diamond Photography"
         },
         {
           img: require("@/assets/portfolio/diamondeventshire.jpg"),
@@ -109,6 +119,15 @@ export default {
           img: require("@/assets/portfolio/escrooms.jpg"),
           url: "http://escrooms.com.au",
           name: "ESC Rooms"
+        },
+        {
+          img: require("@/assets/portfolio/abcaccounting.jpg"),
+          url: "https://abcaccounting.com.au/",
+          name: "ABC Accounting"
+        },               {
+          img: require("@/assets/portfolio/epshirecars.jpg"),
+          url: "http://www.epshirecars.com/",
+          name: "EPS Hire Cars"
         }
       ]
     };
