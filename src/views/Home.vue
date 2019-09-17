@@ -6,7 +6,7 @@
         <v-col cols="12" class="primary full-height white--text">
           <v-row>
             <v-col class="pt-0" cols="12">
-              <Navbar />
+              <Navbar :desktopMenu="true" />
             </v-col>
           </v-row>
           <v-row class="top text-center">
