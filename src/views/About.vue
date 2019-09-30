@@ -3,18 +3,7 @@
     <Spinner v-if="!show" />
     <div class="pt-0 pb-0 pl-2">
       <v-row>
-        <v-col cols="12" md="12" lg="3" class="primary mobile-banner white--text">
-          <v-row>
-            <v-col class="pt-0" cols="12">
-              <Navbar />
-            </v-col>
-          </v-row>
-          <v-row class="slide-left">
-            <v-col class="text-center">
-              <p class="display-1 font-weight-black white--text">ABOUT</p>
-            </v-col>
-          </v-row>
-        </v-col>
+        <Sidebar pageTitle="About" />
         <v-col cols="12" md="12" lg="9" class="pt-0 pb-0 px-5">
           <v-row class="slide-right">
             <v-col cols="12" md="5" class="text-center">
@@ -47,13 +36,13 @@
 </template>
 
 <script>
-import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
 import Timeline from "../components/Timeline";
 import WorkSkills from "../components/WorkSkills";
 import Spinner from "../components/Spinner";
 
 export default {
-  components: { Navbar, Timeline, WorkSkills, Spinner },
+  components: { Sidebar, Timeline, WorkSkills, Spinner },
   data() {
     return {
       show: false,

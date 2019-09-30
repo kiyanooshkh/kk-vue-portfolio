@@ -3,18 +3,7 @@
     <Spinner v-if="grams.length == 0" />
     <div class="pt-0 pb-0 pl-2">
       <v-row>
-        <v-col cols="12" md="12" lg="3" class="primary mobile-banner white--text">
-          <v-row>
-            <v-col class="pt-0" cols="12">
-              <Navbar />
-            </v-col>
-          </v-row>
-          <v-row class="slide-left">
-            <v-col class="text-center">
-              <p class="display-1 font-weight-black white--text">PHOTOGRAPHY</p>
-            </v-col>
-          </v-row>
-        </v-col>
+        <Sidebar pageTitle="Photography" />
         <v-col cols="12" md="12" lg="9" class="pt-0 pb-0">
           <v-row>
             <v-col class="pt-0 pb-0">
@@ -55,12 +44,12 @@
 </template>
 
 <script>
-import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
 import Spinner from "../components/Spinner";
 import axios from "axios";
 
 export default {
-  components: { Navbar, Spinner },
+  components: { Sidebar, Spinner },
   data() {
     return {
       noRadius: true,
@@ -109,17 +98,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-.slide-left {
-  margin-top: 5%;
-}
-
-@media only screen and (max-width: 1024px) {
-  .slide-left {
-    margin-top: 1%;
-  }
-  .full-height {
-    height: 200px;
-  }
-}
-</style>
