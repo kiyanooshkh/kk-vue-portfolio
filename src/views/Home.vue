@@ -41,6 +41,9 @@ export default {
 };
 </script>
 <style scoped>
+.full-height {
+  height: 100vh;
+}
 .uppercase {
   text-transform: uppercase;
 }
