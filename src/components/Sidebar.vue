@@ -28,7 +28,7 @@ export default {
 .left-side {
   margin-top: 5%;
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1250px) {
 .full-height {
     height: 200px;
   }
