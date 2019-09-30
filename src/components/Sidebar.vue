@@ -29,7 +29,7 @@ export default {
   margin-top: 5%;
 }
 @media only screen and (max-width: 1024px) {
-    .full-height {
+.full-height {
     height: 200px;
   }
   .left-side {
