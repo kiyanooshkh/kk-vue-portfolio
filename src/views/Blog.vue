@@ -35,7 +35,7 @@ export default {
     return {
       show: false,
       noRadius: true,
-      url: "http://kk-blog.ptshosting.com/wp-json/wp/v2/posts/",
+      url: "https://kk-blog.ptshosting.com/wp-json/wp/v2/posts/",
       contents: [],
       error: false
     };
@@ -47,7 +47,7 @@ export default {
         .then(({ data }) => {
           this.contents = data;
         })
-        .catch(function(errorMessage) {
+        .catch(errorMessage => {
           console.log(errorMessage);
           this.error = true;
         });
