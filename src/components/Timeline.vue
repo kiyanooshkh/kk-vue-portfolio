@@ -19,7 +19,7 @@ export default {
     jobs: [
       {
         title: "Full-Stack Developer",
-        company: "Certegy Ezi-Pay",
+        company: "FlexiGroup Limited (FXL)",
         year: "Apr 2018 - Present",
         description: `Designing, developing and unit testing web application, across the full application stack (C#.NET including, WebAPI, MVC, EF) <br>
                       Keeping abreast of new technologies in the web and mobile space <br>
@@ -31,7 +31,7 @@ export default {
       },
       {
         title: "Frontend Developer",
-        company: "Certegy Ezi-Pay",
+        company: "FlexiGroup Limited (FXL)",
         year: "Jan 2017 – Apr 2018",
         description: `Application Development Object-Orientated C# .NET, MVC <br>
                       Website Development with Aurelia, HTML, CSS, XML, Bootstrap, JavaScript <br>
