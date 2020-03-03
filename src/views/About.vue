@@ -9,7 +9,7 @@
             <v-col cols="12" md="5" class="text-center">
               <div class="mb-4 text-left">
                 <p class="title mb-1">About</p>
-                <p>My name is Kiyanoosh Khosravi and I live in Adelaide, Australia. I was always passionate about technology and computer science. I gained my dream by studying the computer science from private schools to university education. University helped me to develop my technical skills such as networking, programming and web development and improved my other skills such as communications, team management, support. I’m currently working as Full Stack Developer for FlexiGroup</p>
+                <p>My name is Kiyanoosh Khosravi and I live in Adelaide, Australia. I was always passionate about technology and computer science. I’m currently working as Full Stack Developer for FlexiGroup</p>
                 <p class="title mb-1">Linkedin Profile</p>
                 <p>You can view my LinkedIn profile</p>
                 <v-btn
