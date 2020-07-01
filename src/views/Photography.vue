@@ -4,7 +4,7 @@
     <div class="pt-0 pb-0 pl-2">
       <v-row>
         <Sidebar pageTitle="Photography" />
-        <v-col cols="12" md="12" lg="9" class="pt-0 pb-0">
+        <v-col cols="12" md="12" lg="10" class="pt-0 pb-0">
           <v-row>
             <v-col class="pt-0 pb-0">
               <template v-if="grams.length > 0">

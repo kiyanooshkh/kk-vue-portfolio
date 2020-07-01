@@ -4,7 +4,7 @@
     <div class="pt-0 pb-0 pl-2">
       <v-row>
         <Sidebar pageTitle="About" />
-        <v-col cols="12" md="12" lg="9" class="pt-0 pb-0 px-5">
+        <v-col cols="12" md="12" lg="10" class="pt-0 pb-0 px-5">
           <v-row class="slide-right">
             <v-col cols="12" md="5" class="text-center">
               <div class="mb-4 text-left">

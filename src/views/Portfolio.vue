@@ -4,7 +4,7 @@
     <div class="pt-0 pb-0 pl-2">
       <v-row>
         <Sidebar pageTitle="Portfolio" />
-        <v-col cols="12" md="12" lg="9" class="pt-0 pb-0">
+        <v-col cols="12" md="12" lg="10" class="pt-0 pb-0">
           <v-row>
             <v-col
               v-for="item in items"
@@ -74,11 +74,11 @@ export default {
           url: "https://bahaimedia.net/",
           name: "Baha'i Media"
         },
-        {
+        /*{
           img: require("@/assets/portfolio/monaviphotography.jpg"),
           url: "http://monaviphotography.com/",
           name: "Monavi Photography"
-        },
+        },*/
                 {
           img: require("@/assets/portfolio/pinkdiamondphotography.jpg"),
           url: "http://www.pinkdiamondphotography.com.au",
@@ -104,11 +104,11 @@ export default {
           url: "https://tamarahuntington.com.au/",
           name: "Tamara Huntington"
         },
-        {
+        /*{
           img: require("@/assets/portfolio/escrooms.jpg"),
           url: "http://escrooms.com.au",
           name: "ESC Rooms"
-        },
+        },*/
         {
           img: require("@/assets/portfolio/abcaccounting.jpg"),
           url: "https://abcaccounting.com.au/",
