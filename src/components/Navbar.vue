@@ -48,7 +48,7 @@ export default {
         { title: "Home", icon: "home", route: "/" },
         { title: "Portfolio", icon: "mdi-chevron-right", route: "/portfolio" },
         { title: "About", icon: "mdi-chevron-right", route: "/about" },
-        { title: "Photography", icon: "mdi-chevron-right", route: "/photography" },
+        /*{ title: "Photography", icon: "mdi-chevron-right", route: "/photography" },*/
         { title: "Contact", icon: "mdi-chevron-right", route: "/contact" }
       ]
     };
