@@ -1,42 +1,28 @@
 <template>
-  <v-row>
-    <v-col no-gutters class="pt-0 pb-0" cols="12">
-      <v-btn
-        color="primary"
-        depressed
-        large
-        @click.stop="drawer = !drawer"
-      >
-        <v-icon left color="white">mdi-menu</v-icon>
-        <span>MENU</span>
-      </v-btn>
-      <v-navigation-drawer v-model="drawer" color="primary" absolute temporary>
+  <div>
+    <v-navigation-drawer v-model="drawer" color="dark" app clipped>
+      <v-list dense>
         <v-list-item>
           <v-list-item-content>
-            <v-list-item-title>
+            <v-list-item-title class="pt-6 pb-6">
               <v-row align="center" justify="center">
                 <v-img src="../assets/kiyanoosh-logo.svg" max-width="250" max-height="50"></v-img>
               </v-row>
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item v-for="item in items" :key="item.title" link :to="item.route">
+          <v-list-item-content class="white--text text-center">
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
 
-        <v-divider></v-divider>
-
-        <v-list dense>
-          <v-list-item v-for="item in items" :key="item.title" link :to="item.route">
-            <v-list-item-icon>
-              <v-icon class="white--text">{{ item.icon }}</v-icon>
-            </v-list-item-icon>
-
-            <v-list-item-content class="white--text">
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </v-navigation-drawer>
-    </v-col>
-  </v-row>
+    <v-app-bar v-if="isMobile" app clipped-left flat color="dark">
+      <v-app-bar-nav-icon class="white--text d-lg-none" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+    </v-app-bar>
+  </div>
 </template>
 
 <script>
@@ -44,14 +30,36 @@ export default {
   data() {
     return {
       drawer: null,
+      isMobile: false,
       items: [
         { title: "Home", icon: "home", route: "/" },
-        { title: "Portfolio", icon: "mdi-chevron-right", route: "/portfolio" },
-        { title: "About", icon: "mdi-chevron-right", route: "/about" },
-        /*{ title: "Photography", icon: "mdi-chevron-right", route: "/photography" },*/
-        { title: "Contact", icon: "mdi-chevron-right", route: "/contact" }
+        { title: "Portfolio", icon: "mdi-chevron-right", route: "#portfolio" },
+        { title: "About", icon: "mdi-chevron-right", route: "#about" },
+        { title: "Contact", icon: "mdi-chevron-right", route: "#contact" }
       ]
     };
+  },
+  beforeDestroy() {
+    if (typeof window !== "undefined") {
+      window.removeEventListener("resize", this.onResize, { passive: true });
+    }
+  },
+
+  mounted() {
+    this.onResize();
+    window.addEventListener("resize", this.onResize, { passive: true });
+  },
+  methods: {
+    onResize() {
+      this.isMobile = window.innerWidth < 1260;
+    }
   }
 };
 </script>
+<style scoped>
+.v-list-item__title {
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1rem !important;
+}
+</style>

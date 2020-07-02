@@ -1,14 +1,13 @@
 <template>
-  <v-sheet :tile="noRadius" class="overflow-hidden">
-    <Spinner v-if="!show" />
-    <div class="pt-0 pb-0 pl-2">
+    <div id="about">
       <v-row>
-        <Sidebar pageTitle="About" />
-        <v-col cols="12" md="12" lg="10" class="pt-0 pb-0 px-5">
-          <v-row class="slide-right">
+        <v-col class="12">
+                <p class="display-1 pt-5">About</p>
+        </v-col>
+        <v-col cols="12" class="pt-0">
+          <v-row>
             <v-col cols="12" md="5" class="text-center">
               <div class="mb-4 text-left">
-                <p class="title mb-1">About</p>
                 <p>My name is Kiyanoosh Khosravi and I live in Adelaide, Australia. I was always passionate about technology and computer science. I’m currently working as Full Stack Developer for FlexiGroup</p>
                 <p class="title mb-1">Linkedin Profile</p>
                 <p>You can view my LinkedIn profile</p>
@@ -32,17 +31,14 @@
         </v-col>
       </v-row>
     </div>
-  </v-sheet>
 </template>
 
 <script>
-import Sidebar from "../components/Sidebar";
 import Timeline from "../components/Timeline";
 import WorkSkills from "../components/WorkSkills";
-import Spinner from "../components/Spinner";
 
 export default {
-  components: { Sidebar, Timeline, WorkSkills, Spinner },
+  components: {Timeline, WorkSkills },
   data() {
     return {
       show: false,

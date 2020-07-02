@@ -1,35 +1,32 @@
 <template>
-  <v-sheet :tile="noRadius" class="overflow-hidden">
-    <Spinner v-if="!show" />
-    <div class="pt-0 pb-0 pl-2">
-      <v-row>
-        <Sidebar pageTitle="Contact"/>
-        <v-col cols="12" md="12" lg="10" class="pt-0 pb-0">
-          <v-row>
-            <v-col cols="12" md="6" class="text-center">
-              <ContactForm />
-            </v-col>
-            <v-col cols="12" md="6">
-              <v-img
-                src="@/assets/contact-image.jpg"
-                lazy-src="item.img"
-                class="center grey lighten-2"
-              />
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </div>
-  </v-sheet>
+  <div id="contact">
+    <v-row>
+      <v-col class="12">
+        <p class="display-1 pt-5">Contact</p>
+      </v-col>
+      <v-col cols="12" class="pt-0 pb-0">
+        <v-row>
+          <v-col cols="12" md="6" class="text-center">
+            <ContactForm />
+          </v-col>
+          <v-col cols="12" md="6">
+            <v-img
+              src="@/assets/contact-image.jpg"
+              lazy-src="item.img"
+              class="center grey lighten-2"
+            />
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
 <script>
 import ContactForm from "../components/ContactForm";
-import Spinner from "../components/Spinner";
-import Sidebar from "../components/Sidebar";
 
 export default {
-  components: { ContactForm, Spinner, Sidebar },
+  components: { ContactForm },
   data() {
     return {
       show: false,
@@ -48,7 +45,7 @@ export default {
   height: 100vh;
 }
 @media only screen and (max-width: 1250px) {
-.full-height {
+  .full-height {
     height: 200px;
   }
 }

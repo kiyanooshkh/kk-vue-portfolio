@@ -1,69 +1,65 @@
 <template>
-  <v-sheet :tile="noRadius" class="overflow-hidden">
-    <Spinner v-if="!show" />
-    <div class="pt-0 pb-0 pl-2">
-      <v-row>
-        <Sidebar pageTitle="Portfolio" />
-        <v-col cols="12" md="12" lg="10" class="pt-0 pb-0">
-          <v-row>
-            <v-col
-              v-for="item in items"
-              :key="item.img"
-              no-gutters
-              class="pa-0"
-              cols="12"
-              sm="6"
-              md="6"
-            >
-              <v-hover v-slot:default="{ hover }">
-                <v-img
-                  aspect-ratio="2"
-                  :src="item.img"
-                  :lazy-src="item.img"
-                  class="center grey lighten-2"
-                >
-                  <v-expand-transition>
-                    <div
-                      v-if="hover"
-                      class="d-flex transition-fast-in-fast-out primary darken-2 v-card--reveal display-3 white--text"
-                      style="height: 100%;"
-                    >
-                      <v-row class="text-center">
-                        <v-col cols="12">
-                          <span class="title">{{item.name}}</span>
-                        </v-col>
-                        <v-col cols="12">
-                          <v-btn
-                            :href="item.url"
-                            target="_blank"
-                            class="mx-2"
-                            fab
-                            dark
-                            large
-                            color="secondary"
-                          >
-                            <v-icon dark>mdi-open-in-new</v-icon>
-                          </v-btn>
-                        </v-col>
-                      </v-row>
-                    </div>
-                  </v-expand-transition>
-                </v-img>
-              </v-hover>
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
-    </div>
-  </v-sheet>
+  <div id="portfolio">
+    <v-row>
+      <v-col class="12">
+        <p class="display-1 pt-5">Portfolio</p>
+      </v-col>
+      <v-col cols="12" class="pt-0 pb-0">
+        <v-row>
+          <v-col
+            v-for="item in items"
+            :key="item.img"
+            no-gutters
+            class="pa-0"
+            cols="12"
+            sm="6"
+            md="4"
+          >
+            <v-hover v-slot:default="{ hover }">
+              <v-img
+                aspect-ratio="2"
+                :src="item.img"
+                :lazy-src="item.img"
+                class="center grey lighten-2"
+              >
+                <v-expand-transition>
+                  <div
+                    v-if="hover"
+                    class="d-flex transition-fast-in-fast-out primary darken-2 v-card--reveal display-3 white--text"
+                    style="height: 100%;"
+                  >
+                    <v-row class="text-center">
+                      <v-col cols="12">
+                        <span class="title">{{item.name}}</span>
+                      </v-col>
+                      <v-col cols="12">
+                        <v-btn
+                          :href="item.url"
+                          target="_blank"
+                          class="mx-2"
+                          fab
+                          dark
+                          large
+                          color="secondary"
+                        >
+                          <v-icon dark>mdi-open-in-new</v-icon>
+                        </v-btn>
+                      </v-col>
+                    </v-row>
+                  </div>
+                </v-expand-transition>
+              </v-img>
+            </v-hover>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
 <script>
-import Sidebar from "../components/Sidebar";
-import Spinner from "../components/Spinner";
-
 export default {
-  components: { Sidebar, Spinner },
+  components: {},
   data() {
     return {
       show: false,
@@ -74,12 +70,7 @@ export default {
           url: "https://bahaimedia.net/",
           name: "Baha'i Media"
         },
-        /*{
-          img: require("@/assets/portfolio/monaviphotography.jpg"),
-          url: "http://monaviphotography.com/",
-          name: "Monavi Photography"
-        },*/
-                {
+        {
           img: require("@/assets/portfolio/pinkdiamondphotography.jpg"),
           url: "http://www.pinkdiamondphotography.com.au",
           name: "Pink Diamond Photography"
@@ -104,16 +95,12 @@ export default {
           url: "https://tamarahuntington.com.au/",
           name: "Tamara Huntington"
         },
-        /*{
-          img: require("@/assets/portfolio/escrooms.jpg"),
-          url: "http://escrooms.com.au",
-          name: "ESC Rooms"
-        },*/
         {
           img: require("@/assets/portfolio/abcaccounting.jpg"),
           url: "https://abcaccounting.com.au/",
           name: "ABC Accounting"
-        },               {
+        },
+        {
           img: require("@/assets/portfolio/epshirecars.jpg"),
           url: "http://www.epshirecars.com/",
           name: "EPS Hire Cars"
