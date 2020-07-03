@@ -71,19 +71,24 @@ export default {
           name: "Baha'i Media"
         },
         {
+          img: require("@/assets/portfolio/phukettraining.jpg"),
+          url: "http://www.phukettraining.com.au/",
+          name: "Phuket Training"
+        },
+        {
           img: require("@/assets/portfolio/pinkdiamondphotography.jpg"),
           url: "http://www.pinkdiamondphotography.com.au",
           name: "Pink Diamond Photography"
+        },
+                {
+          img: require("@/assets/portfolio/budgetliving.jpg"),
+          url: "https://budgetliving.net.au/",
+          name: "Budget Living"
         },
         {
           img: require("@/assets/portfolio/diamondeventshire.jpg"),
           url: "https://www.diamondeventshire.com.au",
           name: "Diamond Events Hire"
-        },
-        {
-          img: require("@/assets/portfolio/phukettraining.jpg"),
-          url: "http://www.phukettraining.com.au/",
-          name: "Phuket Training"
         },
         {
           img: require("@/assets/portfolio/iisinsulation.jpg"),
