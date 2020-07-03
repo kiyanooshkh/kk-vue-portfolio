@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Spinner v-if="!show" />
     <v-app id="inspire">
       <v-app id="inspire">
         <Navbar />
@@ -7,10 +8,7 @@
           <v-container class="fill-height">
             <v-row align="center" justify="center">
               <v-col>
-                <Profile />
-                <Portfolio />
-                <About />
-                <Contact />
+                <router-view></router-view>
               </v-col>
             </v-row>
           </v-container>
@@ -21,22 +19,25 @@
 </template>
 
 <script>
-import Profile from "./views/Profile";
-import Portfolio from "./views/Portfolio";
-import About from "./views/About";
-import Contact from "./views/Contact";
 import Navbar from "./components/Navbar";
+import Spinner from "./components/Spinner";
 
 export default {
-  components: { Profile, Portfolio, About, Contact, Navbar },
+  components: { Navbar, Spinner },
   name: "App",
   props: {
     source: String
   },
 
   data: () => ({
-    drawer: null
-  })
+    drawer: null,
+          show: false,
+  }),
+  created() {
+    setInterval(() => {
+      this.show = true;
+    }, 2000);
+  }
 };
 </script>
 <style>

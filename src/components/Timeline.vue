@@ -53,24 +53,13 @@ export default {
         title: "Business Owner",
         company: "Prime Tech Solutions",
         year: "Jan 2012 – Feb 2016",
-        description: `Working as sole trader based on Adelaide, South Australia <br>
-                      Web design & Web Development <br>
-                      IT Consultation<br>
-                      Server & network administration<br>
-                      Assembling & Upgrade Computer systems<br>
-                      Training client's staff<br>
-                      Customer Support`
+        description: ``
       },
       {
         title: "System Network Administrator",
         company: "ITOrbit",
         year: "Jan 2008 – Mar 2009",
-        description: `Maintain system efficiency<br>
-                      Troubleshoot problems reported by users<br>
-                      Make recommendations for future upgrades<br>
-                      Maintain network and system security<br>
-                      Identify user needs<br>
-                      Administration and monitoring servers, desktop computers, printers, routers, switches, firewalls, phones, software deployment, security updates and patches`
+        description: ``
       }
     ]
   })

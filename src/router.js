@@ -11,9 +11,12 @@ export default new Router({
 
     if (to.hash) {
       scrollTo = to.hash
+
     } else if (savedPosition) {
       scrollTo = savedPosition.y
     }
+
+    console.log(scrollTo);
 
     return goTo(scrollTo)
   },

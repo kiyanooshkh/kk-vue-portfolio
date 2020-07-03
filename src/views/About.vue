@@ -2,7 +2,7 @@
     <div id="about">
       <v-row>
         <v-col class="12">
-                <p class="display-1 pt-5">About</p>
+            <p class="display-1 pt-5 mt-xs-8">About</p>
         </v-col>
         <v-col cols="12" class="pt-0">
           <v-row>

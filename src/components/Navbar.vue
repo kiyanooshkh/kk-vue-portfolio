@@ -20,7 +20,8 @@
     </v-navigation-drawer>
 
     <v-app-bar v-if="isMobile" app clipped-left flat color="dark">
-      <v-app-bar-nav-icon class="white--text d-lg-none" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon class="white--text d-lg-none" @click.stop="drawer = !drawer">
+      </v-app-bar-nav-icon>
     </v-app-bar>
   </div>
 </template>
