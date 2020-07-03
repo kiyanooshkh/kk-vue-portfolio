@@ -1,7 +1,7 @@
 <template>
   <div id="contact">
     <v-row>
-      <v-col class="12">
+      <v-col cols="12" class="text-center text-lg-left">
         <p class="display-1 pt-5">Contact</p>
       </v-col>
       <v-col cols="12" class="pt-0 pb-0">

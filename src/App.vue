@@ -41,13 +41,8 @@ export default {
 };
 </script>
 <style>
-@media only screen and (max-width: 500px) {
-  .mobile-banner {
-    height: 185px;
-  }
-}
 
-@media (min-width: 1264px) {
+@media (max-width: 1264px) {
   .container {
     max-width: 100%;
   }

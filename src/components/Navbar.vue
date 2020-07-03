@@ -19,7 +19,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar v-if="isMobile" app clipped-left flat color="dark">
+    <v-app-bar v-if="isMobile" app clipped-left collapse-on-scroll flat color="dark">
       <v-app-bar-nav-icon class="white--text d-lg-none" @click.stop="drawer = !drawer">
       </v-app-bar-nav-icon>
     </v-app-bar>
@@ -62,5 +62,9 @@ export default {
   font-size: 1rem !important;
   font-weight: 400 !important;
   line-height: 1rem !important;
+}
+.v-toolbar.v-toolbar--collapsed {
+    max-width: 65px;
+    overflow: hidden;
 }
 </style>

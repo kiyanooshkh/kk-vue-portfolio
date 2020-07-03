@@ -1,7 +1,7 @@
 <template>
     <div id="about">
       <v-row>
-        <v-col class="12">
+        <v-col cols="12" class="text-center text-lg-left">
             <p class="display-1 pt-5 mt-xs-8">About</p>
         </v-col>
         <v-col cols="12" class="pt-0">
@@ -52,8 +52,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-.slide-left {
-  margin-top: 5%;
-}
-</style>
