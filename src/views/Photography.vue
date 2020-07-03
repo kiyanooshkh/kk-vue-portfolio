@@ -3,7 +3,6 @@
     <Spinner v-if="grams.length == 0" />
     <div class="pt-0 pb-0 pl-2">
       <v-row>
-        <Sidebar pageTitle="Photography" />
         <v-col cols="12" md="12" lg="10" class="pt-0 pb-0">
           <v-row>
             <v-col class="pt-0 pb-0">
@@ -44,12 +43,11 @@
 </template>
 
 <script>
-import Sidebar from "../components/Sidebar";
 import Spinner from "../components/Spinner";
 import axios from "axios";
 
 export default {
-  components: { Sidebar, Spinner },
+  components: {Spinner },
   data() {
     return {
       noRadius: true,

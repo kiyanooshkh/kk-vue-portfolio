@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="white--text">
     <v-form v-model="valid" ref="form">
       <v-container>
         <v-row>
@@ -9,6 +9,7 @@
               :rules="nameRules"
               :counter="50"
               label="Name"
+              color="info"
               prepend-icon="mdi-account"
               required
             ></v-text-field>
@@ -20,6 +21,7 @@
               :counter="100"
               label="Email"
               prepend-icon="email"
+                            color="info"
               required
             ></v-text-field>
           </v-col>

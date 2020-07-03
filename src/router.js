@@ -45,11 +45,6 @@ export default new Router({
       path: '/portfolio',
       name: 'portfolio',
       component: () => import('./views/Portfolio.vue')
-    },
-    {
-      path: '/blog',
-      name: 'blog',
-      component: () => import('./views/Blog.vue')
     }
   ]
 })
