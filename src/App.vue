@@ -41,6 +41,9 @@ export default {
 };
 </script>
 <style>
+  .container {
+    max-width: 100%;
+  }
 
 @media (max-width: 1264px) {
   .container {
