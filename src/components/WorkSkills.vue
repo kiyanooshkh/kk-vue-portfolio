@@ -32,7 +32,7 @@ export default {
               name: "Vue.Js"
             },
             {
-              name: "Angular 2"
+              name: "Angular"
             },
             {
               name: "Aurelia"
@@ -142,14 +142,15 @@ export default {
               name: "Mentoring"
             },
             {
+              name: "Leadership"
+            },
+            {
               name: "Time management"
             },
             {
               name: "Communication"
             },
-            {
-              name: "Leadership"
-            },
+
             {
               name: "Presentations"
             }
@@ -160,6 +161,3 @@ export default {
   }
 };
 </script>
-
-<style>
-</style>
