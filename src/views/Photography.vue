@@ -1,9 +1,10 @@
 <template>
-  <v-sheet :tile="noRadius" class="overflow-hidden">
-    <Spinner v-if="grams.length == 0" />
-    <div class="pt-0 pb-0 pl-2">
-      <v-row>
-        <v-col cols="12" md="12" lg="10" class="pt-0 pb-0">
+  <div id="photography">
+    <v-row>
+      <v-col cols="12" class="text-center text-lg-left">
+        <p class="display-1 pt-5">Photography</p>
+      </v-col>
+        <v-col cols="12" md="12" lg="12" class="pt-0 pb-0">
           <v-row>
             <v-col class="pt-0 pb-0">
               <template v-if="grams.length > 0">
@@ -13,13 +14,13 @@
                     class="pa-0"
                     cols="12"
                     sm="6"
-                    md="3"
+                    md="2"
                     v-for="gram in grams"
-                    :key="gram.title"
+                    :key="gram.id"
                   >
                     <v-img
-                      :src="gram.images.standard_resolution.url"
-                      :lazy-src="gram.images.low_resolution.url"
+                      :src="gram.media_url"
+                      :lazy-src="gram.media_url"
                       aspect-ratio="1"
                       class="center grey lighten-2"
                     />
@@ -39,39 +40,32 @@
         </v-col>
       </v-row>
     </div>
-  </v-sheet>
 </template>
 
 <script>
-import Spinner from "../components/Spinner";
 import axios from "axios";
 
 export default {
-  components: {Spinner },
+  components: { },
   data() {
     return {
       noRadius: true,
-      accessToken: "6172552658.1677ed0.28dcd06ca01844f1b7b485c6176e8280",
-      url: "https://api.instagram.com/v1/users/self/media/recent/",
+      accessToken: "IGQVJWOThOUnhyZAnFyQ1NRb2lSVTJqZAk9mTUZATMlhLQUQyR3pNb1NPVWl3dlVUUjJSUTZA5bkQ3UHYxNTJuS080Q2FNck5ZASUpTSU81eHhvN2VLdnNyd3I3WVk0VkRvejh6S214ZAW1CMjJQcllKSjZAfNQZDZD",
+      url: "https://graph.instagram.com/me/media?fields=media_url&limit=12&access_token=",
       username: "kiyanoosh.photography",
       grams: [],
       next_url: "",
       error: false
     };
   },
-  computed: {
-    instapage() {
-      return "https://www.instagram.com/" + this.username;
-    }
-  },
   methods: {
     getGrams() {
       axios
-        .get(this.url + "?access_token=" + this.accessToken)
+        .get(this.url + this.accessToken)
         .then(({ data }) => {
           this.grams = data.data;
-          this.username = data.data[0].user.username;
-          this.next_url = data.pagination.next_url;
+          this.next_url = data.paging.next;
+                    console.log(data);
         })
         .catch(function(error) {
           console.log(error);
@@ -83,7 +77,7 @@ export default {
         .get(this.next_url)
         .then(({ data }) => {
           this.grams = this.grams.concat(data.data);
-          this.next_url = data.pagination.next_url;
+          this.next_url = data.paging.next;
         })
         .catch(function(error) {
           console.log(error);

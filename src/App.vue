@@ -24,7 +24,8 @@ import Spinner from "./components/Spinner";
 
 export default {
   components: { Navbar, Spinner },
-  name: "App",
+
+name: "App",
   props: {
     source: String
   },
