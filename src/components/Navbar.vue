@@ -20,8 +20,7 @@
     </v-navigation-drawer>
 
     <v-app-bar v-if="isMobile" app clipped-left collapse-on-scroll flat color="dark">
-      <v-app-bar-nav-icon class="white--text d-lg-none" @click.stop="drawer = !drawer">
-      </v-app-bar-nav-icon>
+      <v-app-bar-nav-icon class="white--text d-lg-none" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
   </div>
 </template>
@@ -33,56 +32,72 @@ export default {
       isActive: false,
       drawer: null,
       isMobile: false,
-      item:1,
+      item: 1,
       items: [
-        { title: "Home", icon: "home", route: "/" },
-        { title: "Portfolio", icon: "mdi-chevron-right", route: "#portfolio" },
-        { title: "About", icon: "mdi-chevron-right", route: "#about" },
-        { title: "Photography", icon: "mdi-chevron-right", route: "#photography" },
-        { title: "Contact", icon: "mdi-chevron-right", route: "#contact" }
+        { title: "Home", route: "/" },
+        { title: "Portfolio", route: "#portfolio" },
+        { title: "About", route: "#about" },
+        { title: "Photography", route: "#photography" },
+        { title: "Contact", route: "#contact" }
       ]
     };
   },
   beforeDestroy() {
     if (typeof window !== "undefined") {
       window.removeEventListener("resize", this.onResize, { passive: true });
-      window.removeEventListener('scroll', this.handleScroll);
+      window.removeEventListener("scroll", this.handleScroll);
     }
   },
 
   mounted() {
     this.onResize();
     window.addEventListener("resize", this.onResize, { passive: true });
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll);
   },
   methods: {
     onResize() {
       this.isMobile = window.innerWidth < 1260;
     },
-    
-    handleScroll () {
 
-        const section = document.querySelectorAll(".section");
-        const sections = {};
-        let i = 0;
+    handleScroll() {
+      const section = document.querySelectorAll(".section");
+      const sections = {};
+      let i = 0;
 
-          Array.prototype.forEach.call(section, function(e) {
-    sections[e.id] = e.offsetTop;
-  });
+      Array.prototype.forEach.call(section, function(e) {
+        sections[e.id] = e.offsetTop;
+      });
 
-    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+      var scrollPosition =
+        document.documentElement.scrollTop || document.body.scrollTop;
 
-    for (i in sections) {
-      if(scrollPosition == 0)
-      {
-        document.querySelector('.v-list-item--active').setAttribute('class', 'v-list-item v-list-item--link theme--dark');
-       }
-      else if (sections[i] <= scrollPosition + 5) {
-        document.querySelector('.v-list-item--active').setAttribute('class', 'v-list-item v-list-item--link theme--dark');
-        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'v-list-item--active v-list-item v-list-item--link theme--dark');
+      for (i in sections) {
+        if (scrollPosition == 0) {
+          let activeElement = document.querySelector(".v-list-item--active");
+
+          if (activeElement) {
+            activeElement.setAttribute(
+              "class",
+              "v-list-item v-list-item--link theme--dark"
+            );
+          }
+        } else if (sections[i] <= scrollPosition + 10) {
+          let activeElement = document.querySelector(".v-list-item--active");
+
+          if (activeElement) {
+            activeElement.setAttribute(
+              "class",
+              "v-list-item v-list-item--link theme--dark"
+            );
+          }
+          document
+            .querySelector("a[href*=" + i + "]")
+            .setAttribute(
+              "class",
+              "v-list-item--active v-list-item v-list-item--link theme--dark"
+            );
+        }
       }
-    }
-      
     }
   }
 };
@@ -94,7 +109,7 @@ export default {
   line-height: 1rem !important;
 }
 .v-toolbar.v-toolbar--collapsed {
-    max-width: 65px;
-    overflow: hidden;
+  max-width: 65px;
+  overflow: hidden;
 }
 </style>
