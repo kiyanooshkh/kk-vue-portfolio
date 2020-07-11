@@ -21,7 +21,7 @@
               :counter="100"
               label="Email"
               prepend-icon="email"
-                            color="info"
+              color="info"
               required
             ></v-text-field>
           </v-col>
