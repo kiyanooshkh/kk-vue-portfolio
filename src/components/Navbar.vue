@@ -80,6 +80,14 @@ export default {
               "class",
               "v-list-item v-list-item--link theme--dark"
             );
+            document
+              .querySelector(
+                "#inspire > div > div > nav > div.v-navigation-drawer__content > div > a:nth-child(2)"
+              )
+              .setAttribute(
+                "class",
+                "v-list-item--active v-list-item v-list-item--link theme--dark"
+              );
           }
         } else if (sections[i] <= scrollPosition + 10) {
           let activeElement = document.querySelector(".v-list-item--active");
