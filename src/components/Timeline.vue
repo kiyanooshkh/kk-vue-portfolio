@@ -27,27 +27,20 @@ export default {
                       Website Development HTML/CSS and JavaScript/Typescript - Aurelia JS <br>
                       Automation GIT, Octopus Deploy <br>
                       Solution Design, Analysis & Documentation <br>
+                      Team leading and mentoring new developers <br>
                       Redeveloping and supporting the legacy systems <br>`
       },
       {
         title: "Frontend Developer",
         company: "FlexiGroup Limited (FXL)",
         year: "Jan 2017 – Apr 2018",
-        description: `Application Development Object-Orientated C# .NET, MVC <br>
-                      Website Development with Aurelia, HTML, CSS, XML, Bootstrap, JavaScript <br>
-                      Solution Design, Analysis & Documentation <br>
-                      Database Development with Entity Framework, LINQ <br>
-                      Redeveloping and supporting the legacy systems`
+        description: ``
       },
       {
         title: "Solution Developer",
         company: "Department of State Development",
         year: "Mar 2016 – Jan 2017",
-        description: `Application Development Object-Orientated Visual C# .NET <br>
-                      Website Development with Angular 2, HTML, CSS, XML, Bootstrap <br>
-                      Solution Design, Analysis & Documentation <br>
-                      Database Development with Entity Framework Code First, LINQ, SSIS package <br>
-                      Redeveloping the legacy systems`
+        description: ``
       },
       {
         title: "Business Owner",

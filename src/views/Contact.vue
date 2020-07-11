@@ -1,5 +1,5 @@
 <template>
-  <div id="contact">
+  <div id="contact" class="section">
     <v-row>
       <v-col cols="12" class="text-center text-lg-left">
         <p class="display-1 pt-5">Contact</p>

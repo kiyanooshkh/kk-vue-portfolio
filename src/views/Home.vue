@@ -19,11 +19,3 @@ export default {
   components: { Profile, Portfolio, About, Contact, Photography },
 };
 </script>
-<style scoped>
-.uppercase {
-  text-transform: uppercase;
-}
-.top {
-  margin-top: 5%;
-}
-</style>

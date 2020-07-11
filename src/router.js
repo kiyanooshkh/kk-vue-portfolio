@@ -6,16 +6,12 @@ import goTo from 'vuetify/es5/services/goto'
 Vue.use(Router)
 
 export default new Router({
-  scrollBehavior: (to, from, savedPosition) => {
+  scrollBehavior: (to) => {
     let scrollTo = 0
 
     if (to.hash) {
       scrollTo = to.hash
-
-    } else if (savedPosition) {
-      scrollTo = savedPosition.y
     }
-
     console.log(scrollTo);
 
     return goTo(scrollTo)
@@ -30,24 +26,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('./views/About.vue')
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: () => import('./views/Contact.vue')
-    },
-    {
       path: '/photography',
       name: 'photography',
       component: () => import('./views/Photography.vue')
     },
-    {
-      path: '/portfolio',
-      name: 'portfolio',
-      component: () => import('./views/Portfolio.vue')
-    }
   ]
 })

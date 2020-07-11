@@ -30,8 +30,10 @@
 export default {
   data() {
     return {
+      isActive: false,
       drawer: null,
       isMobile: false,
+      item:1,
       items: [
         { title: "Home", icon: "home", route: "/" },
         { title: "Portfolio", icon: "mdi-chevron-right", route: "#portfolio" },
@@ -44,16 +46,43 @@ export default {
   beforeDestroy() {
     if (typeof window !== "undefined") {
       window.removeEventListener("resize", this.onResize, { passive: true });
+      window.removeEventListener('scroll', this.handleScroll);
     }
   },
 
   mounted() {
     this.onResize();
     window.addEventListener("resize", this.onResize, { passive: true });
+    window.addEventListener('scroll', this.handleScroll);
   },
   methods: {
     onResize() {
       this.isMobile = window.innerWidth < 1260;
+    },
+    
+    handleScroll () {
+
+        const section = document.querySelectorAll(".section");
+        const sections = {};
+        let i = 0;
+
+          Array.prototype.forEach.call(section, function(e) {
+    sections[e.id] = e.offsetTop;
+  });
+
+    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    for (i in sections) {
+      if(scrollPosition == 0)
+      {
+        document.querySelector('.v-list-item--active').setAttribute('class', 'v-list-item v-list-item--link theme--dark');
+       }
+      else if (sections[i] <= scrollPosition + 5) {
+        document.querySelector('.v-list-item--active').setAttribute('class', 'v-list-item v-list-item--link theme--dark');
+        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'v-list-item--active v-list-item v-list-item--link theme--dark');
+      }
+    }
+      
     }
   }
 };

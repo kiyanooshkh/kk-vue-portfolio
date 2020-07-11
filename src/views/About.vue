@@ -1,5 +1,5 @@
 <template>
-    <div id="about">
+    <div id="about" class="section">
       <v-row>
         <v-col cols="12" class="text-center text-lg-left">
             <p class="display-1 pt-5 mt-xs-8">About</p>

@@ -1,5 +1,5 @@
 <template>
-  <div id="photography">
+  <div id="photography" class="section">
     <v-row>
       <v-col cols="12" class="text-center text-lg-left">
         <p class="display-1 pt-5">Photography</p>
@@ -14,7 +14,7 @@
                     class="pa-0"
                     cols="12"
                     sm="6"
-                    md="2"
+                    md="3"
                     v-for="gram in grams"
                     :key="gram.id"
                   >
@@ -51,7 +51,7 @@ export default {
     return {
       noRadius: true,
       accessToken: "IGQVJWOThOUnhyZAnFyQ1NRb2lSVTJqZAk9mTUZATMlhLQUQyR3pNb1NPVWl3dlVUUjJSUTZA5bkQ3UHYxNTJuS080Q2FNck5ZASUpTSU81eHhvN2VLdnNyd3I3WVk0VkRvejh6S214ZAW1CMjJQcllKSjZAfNQZDZD",
-      url: "https://graph.instagram.com/me/media?fields=media_url&limit=12&access_token=",
+      url: "https://graph.instagram.com/me/media?fields=media_url&limit=8&access_token=",
       username: "kiyanoosh.photography",
       grams: [],
       next_url: "",
@@ -65,7 +65,6 @@ export default {
         .then(({ data }) => {
           this.grams = data.data;
           this.next_url = data.paging.next;
-                    console.log(data);
         })
         .catch(function(error) {
           console.log(error);
