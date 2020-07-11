@@ -19,6 +19,17 @@ export default {
   data() {
     return {
       items: [
+          {
+          title: "Education",
+          skills: [
+            {
+              name: "Bachelor's degree Information Technology"
+            },
+            {
+              name: "Cert IV in Information Technology"
+            }
+          ]
+        },
         {
           title: "Programming",
           skills: [

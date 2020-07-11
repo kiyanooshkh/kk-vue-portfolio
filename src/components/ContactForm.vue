@@ -125,7 +125,7 @@ export default {
       return re.test(mobile);
     },
     cleanup: function(){
-        this.name = "";
+       this.name = "";
        this.email= "";
        this.message= "";
        this.mobile= "";
