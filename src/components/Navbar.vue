@@ -89,6 +89,7 @@ export default {
                 "v-list-item--active v-list-item v-list-item--link theme--dark"
               );
           }
+
         } else if (sections[i] <= scrollPosition + 10) {
           let activeElement = document.querySelector(".v-list-item--active");
 
@@ -97,13 +98,13 @@ export default {
               "class",
               "v-list-item v-list-item--link theme--dark"
             );
-          }
-          document
+            document
             .querySelector("a[href*=" + i + "]")
             .setAttribute(
               "class",
               "v-list-item--active v-list-item v-list-item--link theme--dark"
             );
+          }
         }
       }
     }
