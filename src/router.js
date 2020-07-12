@@ -12,7 +12,6 @@ export default new Router({
     if (to.hash) {
       scrollTo = to.hash
     }
-    console.log(scrollTo);
 
     return goTo(scrollTo)
   },
