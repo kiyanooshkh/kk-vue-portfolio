@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-navigation-drawer v-model="drawer" color="dark" app clipped>
-      <v-list dense>
+      <v-list dense flat>
         <v-list-item>
           <v-list-item-content>
             <v-list-item-title class="pt-6 pb-6">
@@ -45,21 +45,21 @@ export default {
   beforeDestroy() {
     if (typeof window !== "undefined") {
       window.removeEventListener("resize", this.onResize, { passive: true });
-      window.removeEventListener("scroll", this.handleScroll);
+     //window.removeEventListener("scroll", this.handleScroll);
     }
   },
 
   mounted() {
     this.onResize();
     window.addEventListener("resize", this.onResize, { passive: true });
-    window.addEventListener("scroll", this.handleScroll);
+    //window.addEventListener("scroll", this.handleScroll);
   },
   methods: {
     onResize() {
       this.isMobile = window.innerWidth < 1260;
     },
 
-    handleScroll() {
+    /*handleScroll() {
       const section = document.querySelectorAll(".section");
       const sections = {};
       let i = 0;
@@ -90,7 +90,7 @@ export default {
               );
           }
 
-        } else if (sections[i] <= scrollPosition + 10) {
+        } else if (sections[i] <= scrollPosition + 150) {
           let activeElement = document.querySelector(".v-list-item--active");
 
           if (activeElement) {
@@ -107,7 +107,7 @@ export default {
           }
         }
       }
-    }
+    }*/
   }
 };
 </script>
