@@ -1,5 +1,5 @@
 <template>
-  <div id="contact" class="section">
+  <div id="contact" class="section full-height">
     <v-row>
       <v-col cols="12" class="text-center text-lg-left">
         <p class="display-1 pt-5">Contact</p>
@@ -43,10 +43,5 @@ export default {
 <style scoped>
 .full-height {
   height: 100vh;
-}
-@media only screen and (max-width: 1250px) {
-  .full-height {
-    height: 200px;
-  }
 }
 </style>
