@@ -1,6 +1,6 @@
 # kk-vue-portfolio
 
-![Build and Deploy](https://github.com/kiyanooshkh/kk-vue-portfolio/workflows/Build%20and%20Deploy/badge.svg?branch=master&event=check_run)
+![Build and Deploy](https://github.com/kiyanooshkh/kk-vue-portfolio/workflows/Build%20and%20Deploy/badge.svg)
 
 See [demo website](https://kk-portfolio.firebaseapp.com).
 
