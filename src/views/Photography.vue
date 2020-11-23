@@ -50,7 +50,7 @@ export default {
   data() {
     return {
       noRadius: true,
-      accessToken: "IGQVJXckd5UTFVeVZAxZA0stSENjTWFpQkdYcnBYemUycWRSUUZAva0htdUJZAbTBYcWhsZA3ZAVLUxsOXVXV1Y4MjB2VFJXVXk0d19SOWtvTDQxb2JjN2VoVVVBeVVTWlFiZAHlHbjRnbHhuc1FfS0xMUGVJTAZDZD",
+      accessToken: "IGQVJWRTQydFYydWZAUcVVVcXNWQnBhSF9JbzFrM0pvVGRVUDhEekQ4RnlHT2N0Rkd1YVYyS2RyakgyX0pVUzFlREMwS09VUGliTHF5a05oNVZAyVWQxaXRPZAjJlZA3o2Wkg3eXBKamhTSUUtRGR3NjQ3SQZDZD",
       url: "https://graph.instagram.com/me/media?fields=media_url&limit=8&access_token=",
       username: "kiyanoosh.photography",
       grams: [],
