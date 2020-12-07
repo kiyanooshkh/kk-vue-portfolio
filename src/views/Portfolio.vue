@@ -71,9 +71,9 @@ export default {
           name: "Baha'i Media"
         },
         {
-          img: require("@/assets/portfolio/phukettraining.jpg"),
-          url: "http://www.phukettraining.com.au/",
-          name: "Phuket Training"
+          img: require("@/assets/portfolio/escrooms.jpg"),
+          url: "https://www.escrooms.com.au/",
+          name: "Escape Rooms"
         },
         {
           img: require("@/assets/portfolio/pinkdiamondphotography.jpg"),
