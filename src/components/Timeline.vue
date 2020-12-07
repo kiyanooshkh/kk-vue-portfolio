@@ -19,7 +19,7 @@ export default {
     jobs: [
       {
         title: "Full-Stack Developer",
-        company: "FlexiGroup Limited (FXL)",
+        company: "humm Group",
         year: "Apr 2018 - Present",
         description: `Designing, developing and unit testing web application, across the full application stack (C#.NET including, WebAPI, MVC, EF) <br>
                       Keeping abreast of new technologies in the web and mobile space <br>
@@ -32,7 +32,7 @@ export default {
       },
       {
         title: "Frontend Developer",
-        company: "FlexiGroup Limited (FXL)",
+        company: "humm Group",
         year: "Jan 2017 – Apr 2018",
         description: ``
       },

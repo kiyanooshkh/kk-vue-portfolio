@@ -8,7 +8,7 @@
           <v-row>
             <v-col cols="12" md="5" class="text-center">
               <div class="mb-4 text-left">
-                <p>My name is Kiyanoosh Khosravi and I live in Adelaide, Australia. I have a passion for both design (UI and UX) and programming. I’m currently working as Full Stack Developer for FlexiGroup</p>
+                <p>My name is Kiyanoosh Khosravi and I live in Adelaide, Australia. I have a passion for both design (UI and UX) and programming. I’m currently working as Full Stack Developer for humm Group</p>
                 <p class="title mb-1">Linkedin Profile</p>
                 <p>You can view my LinkedIn profile</p>
                 <v-btn
